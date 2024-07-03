@@ -168,6 +168,7 @@ header {
     right: 0;
     margin-right: 30px;
     text-align: center;
+    z-index: 6;
 
     & a {
       font-size: 12px;
@@ -635,13 +636,94 @@ header {
     transform-origin: 0 50%;
     transform: translateY(-50%) rotate(45deg);
   }
+
+  &__list ul{
+    width: 60vw;
+    display: flex;
+    gap: 2vw;
+    justify-content: center;
+    list-style: none;
+  }
+
+  &__img1 {
+    width: 20vw;
+    height: 180px;
+    margin-top: 100px;
+    object-fit: cover;
+
+  }
 }
 
 .p-access {
   height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 100px;
+
+  &__title {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: .8260869565;
+    font-family: 'Times New Roman';
+    z-index: 3;
+  }
+
+  &__title:before {
+    content: "";
+    display: block;
+    background-color: #626262;
+    width: 1px;
+    height: 206px;
+    position: absolute;
+    top: 50%;
+    right: .1em;
+    transform-origin: 0 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
 }
 
 .p-bottomMenu {
-  height: 20vh;
+  height: 30vh;
   display: flex;
+  opacity: 0.5;
+  object-fit: cover;
+
+  &__access {
+    width: 50vw;
+    background: url(../img/welcome.jpg) no-repeat 50% 50% / cover;
+
+    & a {
+      opacity: 1;
+      text-decoration: none;
+      font-size: 60px;
+      text-align: right;
+      font-family: "Times New Roman";
+      color: #fff;
+    }
+  }
+
+  &__cafeBar {
+    width: 50vw;
+    background: url(../img/hotel\ dinner.jpg) no-repeat 50% 50% / cover;
+    object-fit: cover;
+
+    & a {
+      opacity: 1;
+      text-decoration: none;
+      font-size: 60px;
+      text-align: right;
+      font-family: "Times New Roman";
+      color: #fff;
+    }
+  }
+}
+
+.l-footer {
+  height: 120vh;
+  background-color: #7bcccf;
 }
