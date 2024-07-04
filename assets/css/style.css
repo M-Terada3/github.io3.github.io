@@ -623,38 +623,100 @@ header {
 .p-bottomMenu {
   height: 30vh;
   display: flex;
-  opacity: 0.5;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.p-bottomMenu a {
+  text-decoration: none;
 }
 .p-bottomMenu__access {
   width: 50vw;
-  background: url(../img/welcome.jpg) no-repeat 50% 50%/cover;
+  height: 32vh;
+  background: url(../img/welcome.jpg) no-repeat 100%/cover;
+  position: relative;
+  z-index: 1;
 }
-.p-bottomMenu__access a {
-  opacity: 1;
-  text-decoration: none;
+.p-bottomMenu__access::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  opacity: 0.5;
+}
+.p-bottomMenu__accessTitle {
+  position: absolute;
+  top: calc(50% - 30px);
+  right: 32px;
+  z-index: 3;
   font-size: 60px;
-  text-align: right;
   font-family: "Times New Roman";
-  color: #fff;
+  color: black;
 }
 .p-bottomMenu__cafeBar {
   width: 50vw;
-  background: url(../img/hotel\ dinner.jpg) no-repeat 50% 50%/cover;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 32vh;
+  background: url(../img/hotel\ dinner.jpg) no-repeat 100%/cover;
+  position: relative;
+  z-index: 1;
 }
-.p-bottomMenu__cafeBar a {
-  opacity: 1;
-  text-decoration: none;
+.p-bottomMenu__cafeBar::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  opacity: 0.5;
+}
+.p-bottomMenu__cafeBarTitle {
+  position: absolute;
+  top: calc(50% - 30px);
+  left: 32px;
+  z-index: 3;
   font-size: 60px;
-  text-align: right;
   font-family: "Times New Roman";
-  color: #fff;
+  color: black;
 }
 
 .l-footer {
-  height: 120vh;
   background-color: #7bcccf;
+  color: #fff;
+  font-size: 12px;
+}
+.l-footer a {
+  color: #fff;
+  text-decoration: none;
+}
+.l-footer__logo {
+  padding: 100px 0 0 250px;
+}
+.l-footer__flex {
+  display: flex;
+  padding: 20px 0 0 250px;
+}
+.l-footer__infoArea {
+  display: flex;
+  gap: 2vw;
+}
+.l-footer__rightInfo2 img {
+  width: 16px;
+}
+.l-footer__menuList {
+  display: flex;
+  gap: 2vw;
+}
+.l-footer__others {
+  background-color: black;
+  width: 75vw;
+  margin: 0 0 0 250px;
+  padding: 100px;
+}
+.l-footer__others img {
+  width: 90px;
 }/*# sourceMappingURL=style.css.map */

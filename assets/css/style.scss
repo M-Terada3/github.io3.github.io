@@ -690,40 +690,116 @@ header {
 .p-bottomMenu {
   height: 30vh;
   display: flex;
-  opacity: 0.5;
   object-fit: cover;
+
+  & a {
+    text-decoration: none;
+  }
 
   &__access {
     width: 50vw;
-    background: url(../img/welcome.jpg) no-repeat 50% 50% / cover;
+    height: 32vh;
+    background: url(../img/welcome.jpg) no-repeat 100%/ cover;
+    position: relative;
+    z-index: 1;
+  }
 
-    & a {
-      opacity: 1;
-      text-decoration: none;
-      font-size: 60px;
-      text-align: right;
-      font-family: "Times New Roman";
-      color: #fff;
-    }
+  &__access::after{
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height:100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    opacity: 0.5;
+  }
+
+  &__accessTitle {
+    position: absolute;
+    top: calc(50% - 30px);
+    right: 32px;
+    z-index: 3;
+    font-size: 60px;
+    font-family: "Times New Roman";
+    color: black;
   }
 
   &__cafeBar {
     width: 50vw;
-    background: url(../img/hotel\ dinner.jpg) no-repeat 50% 50% / cover;
-    object-fit: cover;
+    height: 32vh;
+    background: url(../img/hotel\ dinner.jpg) no-repeat 100%/ cover;
+    position: relative;
+    z-index: 1;
+  }
 
-    & a {
-      opacity: 1;
-      text-decoration: none;
-      font-size: 60px;
-      text-align: right;
-      font-family: "Times New Roman";
-      color: #fff;
-    }
+  &__cafeBar::after{
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height:100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    opacity: 0.5;
+  }
+
+  &__cafeBarTitle {
+    position: absolute;
+    top: calc(50% - 30px);
+    left: 32px;
+    z-index: 3;
+    font-size: 60px;
+    font-family: "Times New Roman";
+    color: black;
   }
 }
 
 .l-footer {
-  height: 120vh;
   background-color: #7bcccf;
+  color: #fff;
+  font-size: 12px;
+
+  & a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &__logo {
+    padding: 100px 0 0 250px;
+  }
+
+  &__flex {
+    display: flex;
+    padding: 20px 0 0 250px;
+  }
+
+  &__infoArea {
+    display: flex;
+    gap: 2vw;
+  }
+
+  &__rightInfo2 img {
+    width: 16px;
+  }
+
+  &__menuList {
+    display: flex;
+    gap: 2vw;
+  }
+
+  &__others {
+    background-color: black;
+    width: 75vw;
+    margin: 0 0 0 250px;
+    padding: 100px;
+    // display: flex;
+
+
+    & img {
+      width: 90px;
+    }
+  }
 }
