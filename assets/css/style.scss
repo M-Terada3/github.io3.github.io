@@ -106,12 +106,12 @@ header {
   margin: 10px 30px 50px;
 
   &__title {
-    font-size: 7.1875rem;
+    font-size: 6rem;
     font-weight: 500;
     line-height: .8260869565;
     font-family: 'Times New Roman';
     position: absolute;
-    top: -80px;
+    top: -50px;
     left: 14vw;
     z-index: 6;
   }
@@ -239,6 +239,9 @@ header {
     top: 30%;
     left: 48%;
     z-index: 3;
+    line-height: 3;
+    font-family: inherit;
+    color: #626262;
   }
 
   &__right1 {
@@ -302,20 +305,41 @@ header {
     transform: translateY(-50%) rotate(45deg);
   }
 
+  &__subTitle {
+    margin-top: 100px;
+  }
+
+  &__text {
+    color: #626262;
+    font-size: 12px;
+    font-family: inherit;
+  }
+
   &__img1 {
     width: 28vw;
     height: 36vw;
     object-fit: cover;
     position: absolute;
     bottom: 0;
+    transform: rotate(4deg);
   }
 
   &__img2 {
-    width: 36vw;
+    width: 33vw;
     height: 30vw;
     object-fit: cover;
     position: absolute;
     bottom: 0;
+    transform: rotate(-4deg)
+  }
+
+  &__img3 {
+    width: 28vw;
+    height: 36vw;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    transform: rotate(-5deg);
   }
 }
 
@@ -337,7 +361,7 @@ header {
 
   &__title {
     position: absolute;
-    top: 10%;
+    top: 0;
     left: 20%;
     font-size: 3.5rem;
     font-weight: 500;
@@ -359,20 +383,41 @@ header {
     transform: translateY(-50%) rotate(45deg);
   }
 
+  &__subTitle {
+    margin-top: 100px;
+  }
+
+  &__text {
+    color: #626262;
+    font-size: 12px;
+    font-family: inherit;
+  }
+
   &__img1 {
     width: 28vw;
     height: 36vw;
     object-fit: cover;
     position: absolute;
     bottom: 0;
+    transform: rotate(-5deg);
   }
 
   &__img2 {
-    width: 36vw;
+    width: 33vw;
     height: 30vw;
     object-fit: cover;
     position: absolute;
     bottom: 0;
+    transform: rotate(-4deg)
+  }
+
+  &__img3 {
+    width: 28vw;
+    height: 36vw;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    transform: rotate(4deg);
   }
 }
 
@@ -394,7 +439,7 @@ header {
 
   &__title {
     position: absolute;
-    top: 10%;
+    top: 0;
     right: 20%;
     font-size: 3.5rem;
     font-weight: 500;
@@ -416,12 +461,23 @@ header {
     transform: translateY(-50%) rotate(45deg);
   }
 
+  &__subTitle {
+    margin-top: 100px;
+  }
+
+  &__text {
+    color: #626262;
+    font-size: 12px;
+    font-family: inherit;
+  }
+
   &__img1 {
-    width: 28vw;
+    width: 30vw;
     height: 36vw;
     object-fit: cover;
     position: absolute;
     bottom: 0;
+    transform: rotate(1deg)
   }
 
   &__img2 {
@@ -430,6 +486,16 @@ header {
     object-fit: cover;
     position: absolute;
     bottom: 0;
+    transform: rotate(4deg);
+  }
+
+  &__img3 {
+    width: 38vw;
+    height: 30vw;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    transform: rotate(-5deg);
   }
 }
 
@@ -451,7 +517,7 @@ header {
 
   &__title {
     position: absolute;
-    top: 10%;
+    top: 0;
     left: 20%;
     font-size: 3.5rem;
     font-weight: 500;
@@ -473,20 +539,32 @@ header {
     transform: translateY(-50%) rotate(45deg);
   }
 
+  &__subTitle {
+    margin-top: 100px;
+  }
+
+  &__text {
+    color: #626262;
+    font-size: 12px;
+    font-family: inherit;
+  }
+
   &__img1 {
     width: 28vw;
     height: 36vw;
     object-fit: cover;
     position: absolute;
     bottom: 0;
+    transform: rotate(1deg);
   }
 
   &__img2 {
-    width: 36vw;
-    height: 30vw;
+    width: 28vw;
+    height: 35vw;
     object-fit: cover;
     position: absolute;
     bottom: 0;
+    transform: rotate(4deg);
   }
 }
 
@@ -508,7 +586,7 @@ header {
 
   &__title {
     position: absolute;
-    top: 10%;
+    top: 0;
     right: 20%;
     font-size: 3.5rem;
     font-weight: 500;
@@ -530,20 +608,41 @@ header {
     transform: translateY(-50%) rotate(45deg);
   }
 
+  &__subTitle {
+    margin-top: 100px;
+  }
+
+  &__text {
+    color: #626262;
+    font-size: 12px;
+    font-family: inherit;
+  }
+
   &__img1 {
     width: 28vw;
     height: 36vw;
     object-fit: cover;
     position: absolute;
     bottom: 0;
+    transform: rotate(7deg);
   }
 
   &__img2 {
-    width: 36vw;
-    height: 30vw;
+    width: 28vw;
+    height: 36vw;
     object-fit: cover;
     position: absolute;
     bottom: 0;
+    transform: rotate(-1deg);
+  }
+
+  &__img3 {
+    width: 37vw;
+    height: 27vw;
+    object-fit: cover;
+    position: absolute;
+    bottom: 30px;
+    transform: rotate(-3deg);
   }
 }
 
@@ -565,7 +664,7 @@ header {
 
   &__title {
     position: absolute;
-    top: 10%;
+    top: 0;
     left: 20%;
     font-size: 3.5rem;
     font-weight: 500;
@@ -587,20 +686,32 @@ header {
     transform: translateY(-50%) rotate(45deg);
   }
 
+  &__subTitle {
+    margin-top: 100px;
+  }
+
+  &__text {
+    color: #626262;
+    font-size: 12px;
+    font-family: inherit;
+  }
+
   &__img1 {
+    width: 36vw;
+    height: 27vw;
+    object-fit: cover;
+    position: absolute;
+    bottom: 30px;
+    transform: rotate(7deg);
+  }
+
+  &__img2 {
     width: 28vw;
     height: 36vw;
     object-fit: cover;
     position: absolute;
     bottom: 0;
-  }
-
-  &__img2 {
-    width: 36vw;
-    height: 30vw;
-    object-fit: cover;
-    position: absolute;
-    bottom: 0;
+    transform: rotate(-1deg);
   }
 }
 
@@ -611,11 +722,11 @@ header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 
   &__title {
     position: absolute;
-    top: 10%;
+    top: 0;
     left: 20%;
     font-size: 3.5rem;
     font-weight: 500;
@@ -643,11 +754,12 @@ header {
     gap: 2vw;
     justify-content: center;
     list-style: none;
+    margin-top: 150px;
   }
 
   &__img1 {
     width: 20vw;
-    height: 180px;
+    height: 160px;
     margin-top: 100px;
     object-fit: cover;
 
@@ -664,7 +776,7 @@ header {
 
   &__title {
     position: absolute;
-    top: 10%;
+    top: 0;
     left: 20%;
     font-size: 3.5rem;
     font-weight: 500;
@@ -792,14 +904,27 @@ header {
 
   &__others {
     background-color: black;
-    width: 75vw;
     margin: 0 0 0 250px;
     padding: 100px;
     // display: flex;
+  }
 
+  &__othersTitle {
+  }
 
-    & img {
-      width: 90px;
+  &__hotels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4vw;
+
+    & li {
+      width: 15%;
+      list-style: none;
+    }
+
+    & li img {
+      width: 60px;
     }
   }
 }

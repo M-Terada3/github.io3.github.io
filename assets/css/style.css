@@ -86,12 +86,12 @@ header {
   margin: 10px 30px 50px;
 }
 .l-topArea__title {
-  font-size: 7.1875rem;
+  font-size: 6rem;
   font-weight: 500;
   line-height: 0.8260869565;
   font-family: "Times New Roman";
   position: absolute;
-  top: -80px;
+  top: -50px;
   left: 14vw;
   z-index: 6;
 }
@@ -205,6 +205,9 @@ header {
   top: 30%;
   left: 48%;
   z-index: 3;
+  line-height: 3;
+  font-family: inherit;
+  color: #626262;
 }
 .p-intro__right1 {
   width: 32vw;
@@ -261,6 +264,14 @@ header {
   transform-origin: 0 50%;
   transform: translateY(-50%) rotate(45deg);
 }
+.p-cafeBar__subTitle {
+  margin-top: 100px;
+}
+.p-cafeBar__text {
+  color: #626262;
+  font-size: 12px;
+  font-family: inherit;
+}
 .p-cafeBar__img1 {
   width: 28vw;
   height: 36vw;
@@ -268,14 +279,25 @@ header {
      object-fit: cover;
   position: absolute;
   bottom: 0;
+  transform: rotate(4deg);
 }
 .p-cafeBar__img2 {
-  width: 36vw;
+  width: 33vw;
   height: 30vw;
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
   bottom: 0;
+  transform: rotate(-4deg);
+}
+.p-cafeBar__img3 {
+  width: 28vw;
+  height: 36vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  transform: rotate(-5deg);
 }
 
 .p-menu {
@@ -294,7 +316,7 @@ header {
 }
 .p-menu__title {
   position: absolute;
-  top: 10%;
+  top: 0;
   left: 20%;
   font-size: 3.5rem;
   font-weight: 500;
@@ -314,6 +336,14 @@ header {
   transform-origin: 0 50%;
   transform: translateY(-50%) rotate(45deg);
 }
+.p-menu__subTitle {
+  margin-top: 100px;
+}
+.p-menu__text {
+  color: #626262;
+  font-size: 12px;
+  font-family: inherit;
+}
 .p-menu__img1 {
   width: 28vw;
   height: 36vw;
@@ -321,14 +351,25 @@ header {
      object-fit: cover;
   position: absolute;
   bottom: 0;
+  transform: rotate(-5deg);
 }
 .p-menu__img2 {
-  width: 36vw;
+  width: 33vw;
   height: 30vw;
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
   bottom: 0;
+  transform: rotate(-4deg);
+}
+.p-menu__img3 {
+  width: 28vw;
+  height: 36vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  transform: rotate(4deg);
 }
 
 .p-stay {
@@ -347,7 +388,7 @@ header {
 }
 .p-stay__title {
   position: absolute;
-  top: 10%;
+  top: 0;
   right: 20%;
   font-size: 3.5rem;
   font-weight: 500;
@@ -367,13 +408,22 @@ header {
   transform-origin: 0 50%;
   transform: translateY(-50%) rotate(45deg);
 }
+.p-stay__subTitle {
+  margin-top: 100px;
+}
+.p-stay__text {
+  color: #626262;
+  font-size: 12px;
+  font-family: inherit;
+}
 .p-stay__img1 {
-  width: 28vw;
+  width: 30vw;
   height: 36vw;
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
   bottom: 0;
+  transform: rotate(1deg);
 }
 .p-stay__img2 {
   width: 36vw;
@@ -382,6 +432,16 @@ header {
      object-fit: cover;
   position: absolute;
   bottom: 0;
+  transform: rotate(4deg);
+}
+.p-stay__img3 {
+  width: 38vw;
+  height: 30vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  transform: rotate(-5deg);
 }
 
 .p-pool {
@@ -400,7 +460,7 @@ header {
 }
 .p-pool__title {
   position: absolute;
-  top: 10%;
+  top: 0;
   left: 20%;
   font-size: 3.5rem;
   font-weight: 500;
@@ -420,6 +480,14 @@ header {
   transform-origin: 0 50%;
   transform: translateY(-50%) rotate(45deg);
 }
+.p-pool__subTitle {
+  margin-top: 100px;
+}
+.p-pool__text {
+  color: #626262;
+  font-size: 12px;
+  font-family: inherit;
+}
 .p-pool__img1 {
   width: 28vw;
   height: 36vw;
@@ -427,14 +495,16 @@ header {
      object-fit: cover;
   position: absolute;
   bottom: 0;
+  transform: rotate(1deg);
 }
 .p-pool__img2 {
-  width: 36vw;
-  height: 30vw;
+  width: 28vw;
+  height: 35vw;
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
   bottom: 0;
+  transform: rotate(4deg);
 }
 
 .p-sauna {
@@ -453,7 +523,7 @@ header {
 }
 .p-sauna__title {
   position: absolute;
-  top: 10%;
+  top: 0;
   right: 20%;
   font-size: 3.5rem;
   font-weight: 500;
@@ -473,6 +543,14 @@ header {
   transform-origin: 0 50%;
   transform: translateY(-50%) rotate(45deg);
 }
+.p-sauna__subTitle {
+  margin-top: 100px;
+}
+.p-sauna__text {
+  color: #626262;
+  font-size: 12px;
+  font-family: inherit;
+}
 .p-sauna__img1 {
   width: 28vw;
   height: 36vw;
@@ -480,14 +558,25 @@ header {
      object-fit: cover;
   position: absolute;
   bottom: 0;
+  transform: rotate(7deg);
 }
 .p-sauna__img2 {
-  width: 36vw;
-  height: 30vw;
+  width: 28vw;
+  height: 36vw;
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
   bottom: 0;
+  transform: rotate(-1deg);
+}
+.p-sauna__img3 {
+  width: 37vw;
+  height: 27vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  bottom: 30px;
+  transform: rotate(-3deg);
 }
 
 .p-activity {
@@ -506,7 +595,7 @@ header {
 }
 .p-activity__title {
   position: absolute;
-  top: 10%;
+  top: 0;
   left: 20%;
   font-size: 3.5rem;
   font-weight: 500;
@@ -526,21 +615,31 @@ header {
   transform-origin: 0 50%;
   transform: translateY(-50%) rotate(45deg);
 }
+.p-activity__subTitle {
+  margin-top: 100px;
+}
+.p-activity__text {
+  color: #626262;
+  font-size: 12px;
+  font-family: inherit;
+}
 .p-activity__img1 {
+  width: 36vw;
+  height: 27vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  bottom: 30px;
+  transform: rotate(7deg);
+}
+.p-activity__img2 {
   width: 28vw;
   height: 36vw;
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
   bottom: 0;
-}
-.p-activity__img2 {
-  width: 36vw;
-  height: 30vw;
-  -o-object-fit: cover;
-     object-fit: cover;
-  position: absolute;
-  bottom: 0;
+  transform: rotate(-1deg);
 }
 
 .p-journal {
@@ -550,11 +649,11 @@ header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 }
 .p-journal__title {
   position: absolute;
-  top: 10%;
+  top: 0;
   left: 20%;
   font-size: 3.5rem;
   font-weight: 500;
@@ -580,10 +679,11 @@ header {
   gap: 2vw;
   justify-content: center;
   list-style: none;
+  margin-top: 150px;
 }
 .p-journal__img1 {
   width: 20vw;
-  height: 180px;
+  height: 160px;
   margin-top: 100px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -599,7 +699,7 @@ header {
 }
 .p-access__title {
   position: absolute;
-  top: 10%;
+  top: 0;
   left: 20%;
   font-size: 3.5rem;
   font-weight: 500;
@@ -713,10 +813,19 @@ header {
 }
 .l-footer__others {
   background-color: black;
-  width: 75vw;
   margin: 0 0 0 250px;
   padding: 100px;
 }
-.l-footer__others img {
-  width: 90px;
+.l-footer__hotels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4vw;
+}
+.l-footer__hotels li {
+  width: 15%;
+  list-style: none;
+}
+.l-footer__hotels li img {
+  width: 60px;
 }/*# sourceMappingURL=style.css.map */
