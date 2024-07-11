@@ -14,27 +14,52 @@ body {
   margin: 0;
   font-family: Yu Gothic;
   font-weight: 500;
-  letter-spacing: .075em;
+  letter-spacing: 0.075em;
 }
+
+// * {
+//   outline: 2px solid blue;
+// }
+
+.l-wrap {
+  @include sp {
+    width: 100%;
+    max-width: inherit;
+  }
+}
+
 img {
   width: 100%;
 }
 
 header {
-  margin: 80px 50px;
-  height: 750px;
+  padding: 80px 50px;
+
+  @include sp {
+    padding: 30px 0 30px 30px;
+    width: 100%;
+  }
 }
 
 .logo {
   position: fixed;
   z-index: 9;
+  width: 150px;
+
+  @include sp {
+    width: 30%;
+  }
 }
 
 .l-pcHeader {
-  height: 140px;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
+  @include sp {
+    height: 100px;
+  }
 
   &__nav {
     display: flex;
@@ -56,20 +81,21 @@ header {
   }
 
   &__hamMenu {
-    margin-top: 18px;
-  }
-
-  &__hamMenu::before {
+    margin: 18px 30px 0 0;
   }
 
   &__hamburgerBox {
-    width: 100%;
+    width: 100vw;
     background-color: #fff;
     opacity: 0.8;
     z-index: 10;
 
     @include pc {
-      display: none;  //一旦隠す
+      display: none;
+    }
+
+    @include sp {
+      display: none; //一旦隠す
     }
 
     & ul {
@@ -80,10 +106,22 @@ header {
 
 .p-reservation {
   width: 16vw;
+  display: block;
   position: fixed;
   bottom: 5%;
   right: 10%;
   z-index: 9;
+
+  @include sp {
+    width: 40vw;
+    right: -25px;
+    bottom: 32%;
+  }
+
+  &:hover {
+    opacity: 0.8;
+    transition: all 0.1s;
+  }
 
   &__img {
     position: relative;
@@ -97,6 +135,10 @@ header {
     font-size: 1.3vw;
     font-weight: 700;
     z-index: 10;
+
+    @include sp {
+      font-size: 3.3vw;
+    }
   }
 }
 
@@ -105,62 +147,176 @@ header {
   height: 700px;
   margin: 10px 30px 50px;
 
+  @include sp {
+    width: 100vw;
+  }
+
   &__title {
     font-size: 6rem;
     font-weight: 500;
-    line-height: .8260869565;
-    font-family: 'Times New Roman';
+    line-height: 0.8260869565;
+    font-family: "Times New Roman";
     position: absolute;
     top: -50px;
     left: 14vw;
     z-index: 6;
+
+    @include sp {
+      font-size: 4.5rem;
+      left: -20px;
+      top: 5%;
+    }
+  }
+
+  &__imgFrame {
+    position: relative;
+    height: 680px;
+    overflow: hidden;
+    z-index: 4;
+
+    @include sp {
+      width: 80vw;
+    }
+  }
+
+  & img {
+    object-fit: cover;
+  }
+
+  &__img1,
+  &__img2,
+  &__img3 {
+    width: 67vw;
+    height: 500px;
+    top: 16px;
+    left: 140px;
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include sp {
+      width: 80vw;
+      height: 100vh;
+      left: 0;
+    }
   }
 
   &__img1 {
-    width: 60vw;
-    position: absolute;
-    top: 16px;
-    left: 140px;
-    z-index: 4;
-  }
-
-  &__backImg {
-    width: 62.3vw;
-    height: 400px;
-    position: absolute;
-    left: 140px;
-    z-index: 3;
+    animation: slide-animation-01 16s infinite;
   }
 
   &__img2 {
+    animation: slide-animation-02 16s infinite;
+  }
+
+  &__img3 {
+    animation: slide-animation-03 16s infinite;
+  }
+
+  @keyframes slide-animation-01 {
+    0% {
+      opacity: 1;
+    }
+  }
+  @keyframes slide-animation-02 {
+    0% {
+      opacity: 0;
+    }
+    30% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes slide-animation-03 {
+    0% {
+      opacity: 0;
+    }
+    60% {
+      opacity: 0;
+    }
+    70% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  &__backImg {
+    width: 69vw;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 140px;
+    z-index: 3;
+
+    @include sp {
+    width: 84vw;
+    height: 500px;
+    left: 0;
+    }
+  }
+
+  &__img4 {
     width: 32vw;
     height: 32vw;
     position: absolute;
     top: -45px;
     right: 28px;
     z-index: 2;
+
+    @include sp {
+      width: 54vw;
+      height: 90vh;
+      right: 0;
+    }
   }
 
-  &__img3 {
+  &__img5 {
     width: 24vw;
     height: 225px;
-    -o-object-fit: cover;
-    object-fit: cover;
     position: absolute;
     bottom: 150px;
     right: 64px;
     z-index: 5;
+
+    @include sp {
+      width: 40vw;
+      height: 230px;
+      bottom: 92px;
+      right: 0;
+    }
   }
 
-  &__img4 {
+  &__img6 {
     width: 28vw;
     height: 225px;
     position: absolute;
     bottom: 130px;
     left: 0;
     z-index: 1;
-  }
 
+    @include sp {
+      width: 46vw;
+      height: 165px;
+      bottom: 16px;
+      left: -33px;
+    }
+  }
 
   &__fix {
     position: fixed;
@@ -169,6 +325,10 @@ header {
     margin-right: 30px;
     text-align: center;
     z-index: 6;
+
+    @include sp {
+      display: none;
+    }
 
     & a {
       font-size: 12px;
@@ -184,10 +344,12 @@ header {
 
   &__langJP {
     border-bottom: 1px solid #333;
-    margin-bottom: 16px;
+    padding-bottom: 16px;
   }
 }
+
 .p-intro {
+  width: 100vw;
   position: relative;
   height: 100vh;
   margin-bottom: 100px;
@@ -199,6 +361,12 @@ header {
     top: 70px;
     left: 8%;
     z-index: 2;
+
+    @include sp {
+      width: 80vw;
+      height: 260px;
+      left: 0;
+    }
   }
 
   &__left2 {
@@ -208,17 +376,33 @@ header {
     top: 0;
     left: 5%;
     z-index: 1;
+
+    @include sp {
+      width: 88vw;
+      height: 280px;
+      top: 16px;
+      left: 0;
+    }
   }
 
   &__title {
     position: absolute;
-    top: 10%;
-    left: 25%;
-    font-size: 3.2rem;
     font-weight: 500;
-    line-height: .8260869565;
-    font-family: 'Times New Roman';
+    line-height: 0.8260869565;
+    font-family: "Times New Roman";
     z-index: 3;
+
+    @include pc {
+      top: 10%;
+      left: 25%;
+      font-size: 3.2rem;
+    }
+
+    @include sp {
+      bottom: 22%;
+      left: 8%;
+      font-size: 12vw;
+    }
   }
 
   &__title:before {
@@ -229,19 +413,32 @@ header {
     height: 206px;
     position: absolute;
     top: 50%;
-    right: .1em;
+    right: 0.1em;
     transform-origin: 0 50%;
     transform: translateY(-50%) rotate(45deg);
+
+    @include sp {
+      height: 36vh;
+    }
   }
 
   &__text {
     position: absolute;
-    top: 30%;
     left: 48%;
     z-index: 3;
     line-height: 3;
     font-family: inherit;
     color: #626262;
+
+    @include pc {
+      top: 30%;
+    }
+
+    @include sp {
+      bottom: -36%;
+      left: 24%;
+      line-height: 2.5;
+    }
   }
 
   &__right1 {
@@ -252,20 +449,10 @@ header {
     right: 3%;
     z-index: 1;
   }
-
-  &__right1:after {  //表示されない
-    content: "";
-    background: url(../../assets/img/suna.jpg) no-repeat 50% 50% / cover;
-    width: 50.248%;
-    padding-bottom: 71.782%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-  }
 }
 
 .p-cafeBar {
+  width: 100vw;
   position: relative;
   height: 70vh;
   display: flex;
@@ -285,10 +472,10 @@ header {
     position: absolute;
     top: 10%;
     right: 20%;
-    font-size: 3.0rem;
+    font-size: 3rem;
     font-weight: 500;
-    line-height: .8260869565;
-    font-family: 'Times New Roman';
+    line-height: 0.8260869565;
+    font-family: "Times New Roman";
     z-index: 3;
   }
 
@@ -300,7 +487,7 @@ header {
     height: 206px;
     position: absolute;
     top: 50%;
-    right: .1em;
+    right: 0.1em;
     transform-origin: 0 50%;
     transform: translateY(-50%) rotate(45deg);
   }
@@ -330,7 +517,7 @@ header {
     object-fit: cover;
     position: absolute;
     bottom: 0;
-    transform: rotate(-4deg)
+    transform: rotate(-4deg);
   }
 
   &__img3 {
@@ -344,6 +531,7 @@ header {
 }
 
 .p-menu {
+  width: 100vw;
   height: 70vh;
   position: relative;
   display: flex;
@@ -365,8 +553,8 @@ header {
     left: 20%;
     font-size: 3.5rem;
     font-weight: 500;
-    line-height: .8260869565;
-    font-family: 'Times New Roman';
+    line-height: 0.8260869565;
+    font-family: "Times New Roman";
     z-index: 3;
   }
 
@@ -378,7 +566,7 @@ header {
     height: 206px;
     position: absolute;
     top: 50%;
-    right: .1em;
+    right: 0.1em;
     transform-origin: 0 50%;
     transform: translateY(-50%) rotate(45deg);
   }
@@ -399,7 +587,7 @@ header {
     object-fit: cover;
     position: absolute;
     bottom: 0;
-    transform: rotate(-5deg);
+    transform: rotate(-4deg);
   }
 
   &__img2 {
@@ -408,7 +596,7 @@ header {
     object-fit: cover;
     position: absolute;
     bottom: 0;
-    transform: rotate(-4deg)
+    transform: rotate(-3deg);
   }
 
   &__img3 {
@@ -417,11 +605,17 @@ header {
     object-fit: cover;
     position: absolute;
     bottom: 0;
-    transform: rotate(4deg);
+    transform: rotate(3deg);
+  }
+
+  &__more a {
+    text-decoration: none;
+    color: #000;
   }
 }
 
 .p-stay {
+  width: 100vw;
   position: relative;
   height: 70vh;
   display: flex;
@@ -443,8 +637,8 @@ header {
     right: 20%;
     font-size: 3.5rem;
     font-weight: 500;
-    line-height: .8260869565;
-    font-family: 'Times New Roman';
+    line-height: 0.8260869565;
+    font-family: "Times New Roman";
     z-index: 3;
   }
 
@@ -456,7 +650,7 @@ header {
     height: 206px;
     position: absolute;
     top: 50%;
-    right: .1em;
+    right: 0.1em;
     transform-origin: 0 50%;
     transform: translateY(-50%) rotate(45deg);
   }
@@ -477,7 +671,7 @@ header {
     object-fit: cover;
     position: absolute;
     bottom: 0;
-    transform: rotate(1deg)
+    transform: rotate(1deg);
   }
 
   &__img2 {
@@ -495,11 +689,17 @@ header {
     object-fit: cover;
     position: absolute;
     bottom: 0;
-    transform: rotate(-5deg);
+    transform: rotate(-3deg);
+  }
+
+  &__more a {
+    text-decoration: none;
+    color: #000;
   }
 }
 
 .p-pool {
+  width: 100vw;
   height: 70vh;
   position: relative;
   display: flex;
@@ -521,8 +721,8 @@ header {
     left: 20%;
     font-size: 3.5rem;
     font-weight: 500;
-    line-height: .8260869565;
-    font-family: 'Times New Roman';
+    line-height: 0.8260869565;
+    font-family: "Times New Roman";
     z-index: 3;
   }
 
@@ -534,7 +734,7 @@ header {
     height: 206px;
     position: absolute;
     top: 50%;
-    right: .1em;
+    right: 0.1em;
     transform-origin: 0 50%;
     transform: translateY(-50%) rotate(45deg);
   }
@@ -566,9 +766,15 @@ header {
     bottom: 0;
     transform: rotate(4deg);
   }
+
+  &__more a {
+    text-decoration: none;
+    color: #000;
+  }
 }
 
 .p-sauna {
+  width: 100vw;
   position: relative;
   height: 70vh;
   display: flex;
@@ -590,8 +796,8 @@ header {
     right: 20%;
     font-size: 3.5rem;
     font-weight: 500;
-    line-height: .8260869565;
-    font-family: 'Times New Roman';
+    line-height: 0.8260869565;
+    font-family: "Times New Roman";
     z-index: 3;
   }
 
@@ -603,7 +809,7 @@ header {
     height: 206px;
     position: absolute;
     top: 50%;
-    right: .1em;
+    right: 0.1em;
     transform-origin: 0 50%;
     transform: translateY(-50%) rotate(45deg);
   }
@@ -624,7 +830,7 @@ header {
     object-fit: cover;
     position: absolute;
     bottom: 0;
-    transform: rotate(7deg);
+    transform: rotate(4deg);
   }
 
   &__img2 {
@@ -642,11 +848,17 @@ header {
     object-fit: cover;
     position: absolute;
     bottom: 30px;
-    transform: rotate(-3deg);
+    transform: rotate(-2deg);
+  }
+
+  &__more a {
+    text-decoration: none;
+    color: #000;
   }
 }
 
 .p-activity {
+  width: 100vw;
   height: 70vh;
   position: relative;
   display: flex;
@@ -668,8 +880,8 @@ header {
     left: 20%;
     font-size: 3.5rem;
     font-weight: 500;
-    line-height: .8260869565;
-    font-family: 'Times New Roman';
+    line-height: 0.8260869565;
+    font-family: "Times New Roman";
     z-index: 3;
   }
 
@@ -681,7 +893,7 @@ header {
     height: 206px;
     position: absolute;
     top: 50%;
-    right: .1em;
+    right: 0.1em;
     transform-origin: 0 50%;
     transform: translateY(-50%) rotate(45deg);
   }
@@ -702,7 +914,7 @@ header {
     object-fit: cover;
     position: absolute;
     bottom: 30px;
-    transform: rotate(7deg);
+    transform: rotate(4deg);
   }
 
   &__img2 {
@@ -713,9 +925,15 @@ header {
     bottom: 0;
     transform: rotate(-1deg);
   }
+
+  &__more a {
+    text-decoration: none;
+    color: #000;
+  }
 }
 
 .p-journal {
+  width: 100vw;
   height: 70vh;
   background-color: #e0dad4;
   position: relative;
@@ -730,8 +948,8 @@ header {
     left: 20%;
     font-size: 3.5rem;
     font-weight: 500;
-    line-height: .8260869565;
-    font-family: 'Times New Roman';
+    line-height: 0.8260869565;
+    font-family: "Times New Roman";
     z-index: 3;
   }
 
@@ -743,45 +961,53 @@ header {
     height: 206px;
     position: absolute;
     top: 50%;
-    right: .1em;
+    right: 0.1em;
     transform-origin: 0 50%;
     transform: translateY(-50%) rotate(45deg);
   }
 
-  &__list ul{
+  &__list ul {
     width: 60vw;
     display: flex;
     gap: 2vw;
     justify-content: center;
     list-style: none;
-    margin-top: 150px;
+    margin-top: 113px;
+    padding-inline-start: 0;
   }
 
-  &__img1 {
+  & img {
     width: 20vw;
     height: 160px;
-    margin-top: 100px;
+    margin-top: 56px;
     object-fit: cover;
+  }
 
+  & span {
+    border-bottom: 1px solid #000;
+  }
+
+  & a {
+    text-decoration: none;
+    color: #000;
+    text-align: left;
+    font-size: 12px;
   }
 }
 
 .p-access {
-  height: 100vh;
+  width: 100vw;
   position: relative;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   margin-bottom: 100px;
 
   &__title {
     position: absolute;
-    top: 0;
+    top: 50px;
     left: 20%;
     font-size: 3.5rem;
     font-weight: 500;
-    line-height: .8260869565;
-    font-family: 'Times New Roman';
+    line-height: 0.8260869565;
+    font-family: "Times New Roman";
     z-index: 3;
   }
 
@@ -793,16 +1019,82 @@ header {
     height: 206px;
     position: absolute;
     top: 50%;
-    right: .1em;
+    right: 0.1em;
     transform-origin: 0 50%;
     transform: translateY(-50%) rotate(45deg);
+  }
+
+  &__top {
+    display: flex;
+    justify-content: center;
+    gap: 6vw;
+    align-items: center;
+    padding-top: 180px;
+  }
+
+  &__leftArea {
+    font-size: 12px;
+    padding-top: 300px;
+  }
+
+  &__leftArea p:nth-child(4),
+  :nth-child(5) {
+    font-weight: 700;
+  }
+
+  &__leftArea p:nth-child(5) {
+    margin-bottom: 40px;
+  }
+
+  &__googleMap {
+    color: #000;
+    font-size: 16px;
+    border: 1px solid #000;
+    background-color: #fff;
+    padding: 24px 48px 24px 36px;
+    text-decoration: none;
+    position: relative;
+
+    &:hover {
+      color: #fff;
+      background-color: #000;
+    }
+  }
+
+  &__googleMap span::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/google_icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 29%;
+    right: 10%;
+  }
+
+  &__rightArea img {
+    width: 45vw;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    padding-top: 100px;
   }
 }
 
 .p-bottomMenu {
+  width: 100vw;
   height: 30vh;
   display: flex;
-  object-fit: cover;
+
+  @include sp {
+    height: 15vh;
+  }
 
   & a {
     text-decoration: none;
@@ -810,18 +1102,22 @@ header {
 
   &__access {
     width: 50vw;
-    height: 32vh;
-    background: url(../img/welcome.jpg) no-repeat 100%/ cover;
+    height: 30vh;
+    background: url(../img/welcome.jpg) no-repeat 100% / cover;
     position: relative;
     z-index: 1;
+
+    @include sp {
+      height: 15vh;
+    }
   }
 
-  &__access::after{
+  &__access::after {
     content: "";
     position: absolute;
     z-index: 2;
     width: 100%;
-    height:100%;
+    height: 100%;
     top: 0;
     left: 0;
     background-color: white;
@@ -836,22 +1132,31 @@ header {
     font-size: 60px;
     font-family: "Times New Roman";
     color: black;
+
+    @include sp {
+      font-size: 22px;
+      top: calc(50% - 13px);
+    }
   }
 
   &__cafeBar {
     width: 50vw;
-    height: 32vh;
-    background: url(../img/hotel\ dinner.jpg) no-repeat 100%/ cover;
+    height: 30vh;
+    background: url(../img/hotel\ dinner.jpg) no-repeat 100% / cover;
     position: relative;
     z-index: 1;
+
+    @include sp {
+      height: 15vh;
+    }
   }
 
-  &__cafeBar::after{
+  &__cafeBar::after {
     content: "";
     position: absolute;
     z-index: 2;
     width: 100%;
-    height:100%;
+    height: 100%;
     top: 0;
     left: 0;
     background-color: white;
@@ -866,13 +1171,23 @@ header {
     font-size: 60px;
     font-family: "Times New Roman";
     color: black;
+
+    @include sp {
+      font-size: 22px;
+      top: calc(50% - 13px);
+    }
   }
 }
 
 .l-footer {
+  width: 100vw;
   background-color: #7bcccf;
   color: #fff;
-  font-size: 12px;
+  font-size: 11px;
+
+  &__top {
+    padding: 100px 0 0 250px;
+  }
 
   & a {
     color: #fff;
@@ -880,51 +1195,107 @@ header {
   }
 
   &__logo {
-    padding: 100px 0 0 250px;
+    width: 120px;
   }
 
   &__flex {
-    display: flex;
-    padding: 20px 0 0 250px;
+
+    @include pc {
+      display: flex;
+      gap: 10vw;
+      line-height: 1.4;
+      font-weight: 550;
+    }
   }
 
   &__infoArea {
-    display: flex;
-    gap: 2vw;
+    @include pc {
+      display: flex;
+      gap: 2vw;
+      align-items: end;
+      margin-bottom: 50px;
+    }
   }
 
-  &__rightInfo2 img {
-    width: 16px;
+  &__leftInfo2 img {
+    width: 14px;
+  }
+
+  &__rightInfo a:hover {
+    opacity: 0.7;
+    transition: all 0.1s;
   }
 
   &__menuList {
-    display: flex;
-    gap: 2vw;
+
+    @include pc {
+      display: flex;
+      gap: 2vw;
+      align-items: center;
+    }
+  }
+
+  &__menuList ul {
+    margin: 0;
+  }
+
+  &__menuList ul li {
+    list-style: none;
+
+    & a:hover {
+      opacity: 0.7;
+      transition: all 0.1s;
+    }
+  }
+
+  &__listPadding {
+    padding-top: 2vw;
+
+    & h2 {
+      margin: 0;
+    }
+
+    & p {
+      margin: 0;
+    }
+  }
+
+  & h2:first-child {
+    margin-top: 0;
   }
 
   &__others {
     background-color: black;
-    margin: 0 0 0 250px;
     padding: 100px;
-    // display: flex;
-  }
-
-  &__othersTitle {
+    margin: 16px 0 0 250px;
   }
 
   &__hotels {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 4vw;
+
+    @include pc {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 4vw;
+      margin-top: 40px;
+    }
+
+    & a:hover {
+      opacity: 0.7;
+      transition: all 0.1s;
+    }
 
     & li {
-      width: 15%;
+      width: 20%;
       list-style: none;
     }
 
     & li img {
-      width: 60px;
+      width: 80px;
     }
+  }
+
+  & small {
+    margin-left: 250px;
   }
 }
