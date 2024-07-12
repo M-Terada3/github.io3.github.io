@@ -149,6 +149,7 @@ header {
 
   @include sp {
     width: 100vw;
+    height: 600px;
   }
 
   &__title {
@@ -176,6 +177,8 @@ header {
 
     @include sp {
       width: 80vw;
+      height: 600px;
+      left: 8%;
     }
   }
 
@@ -196,7 +199,6 @@ header {
 
     @include sp {
       width: 80vw;
-      height: 100vh;
       left: 0;
     }
   }
@@ -267,7 +269,7 @@ header {
     @include sp {
     width: 84vw;
     height: 500px;
-    left: 0;
+    left: 8%;
     }
   }
 
@@ -297,7 +299,7 @@ header {
     @include sp {
       width: 40vw;
       height: 230px;
-      bottom: 92px;
+      bottom: 84px;
       right: 0;
     }
   }
@@ -306,7 +308,7 @@ header {
     width: 28vw;
     height: 225px;
     position: absolute;
-    bottom: 130px;
+    bottom: 150px;
     left: 0;
     z-index: 1;
 
@@ -353,6 +355,10 @@ header {
   position: relative;
   height: 100vh;
   margin-bottom: 100px;
+
+  @include sp {
+    margin-bottom: 60vh;
+  }
 
   &__left1 {
     width: 34vw;
@@ -401,7 +407,7 @@ header {
     @include sp {
       bottom: 22%;
       left: 8%;
-      font-size: 12vw;
+      font-size: 11vw;
     }
   }
 
@@ -418,7 +424,9 @@ header {
     transform: translateY(-50%) rotate(45deg);
 
     @include sp {
-      height: 36vh;
+      height: 150px;
+      top: -20%;
+      right: -0.55em;
     }
   }
 
@@ -435,9 +443,10 @@ header {
     }
 
     @include sp {
-      bottom: -36%;
-      left: 24%;
-      line-height: 2.5;
+      bottom: -30%;
+      left: 10%;
+      font-size: 3vw;
+      line-height: 3;
     }
   }
 
@@ -448,6 +457,13 @@ header {
     bottom: 0;
     right: 3%;
     z-index: 1;
+
+    @include sp {
+      width: 45vw;
+      height: 45vh;
+      bottom: -46%;
+      right: -30px;
+    }
   }
 }
 
@@ -455,10 +471,17 @@ header {
   width: 100vw;
   position: relative;
   height: 70vh;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-bottom: 100px;
+
+  @include pc {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+
+  @include sp {
+    margin-bottom: 60vh;
+  }
 
   &__leftArea {
     width: 30vw;
@@ -470,13 +493,22 @@ header {
 
   &__title {
     position: absolute;
-    top: 10%;
-    right: 20%;
-    font-size: 3rem;
     font-weight: 500;
     line-height: 0.8260869565;
     font-family: "Times New Roman";
     z-index: 3;
+
+    @include pc {
+      top: 10%;
+      right: 20%;
+      font-size: 3rem;
+    }
+
+    @include sp {
+      bottom: -50px;
+      right: 5%;
+      font-size: 3rem;
+    }
   }
 
   &__title:before {
@@ -490,43 +522,92 @@ header {
     right: 0.1em;
     transform-origin: 0 50%;
     transform: translateY(-50%) rotate(45deg);
+
+    @include sp {
+      height: 150px;
+      top: -20%;
+      right: -0.55em;
+    }
   }
 
   &__subTitle {
     margin-top: 100px;
+
+    @include sp {
+      position: absolute;
+      bottom: -170px;
+      left: 10%;
+    }
   }
 
   &__text {
     color: #626262;
     font-size: 12px;
     font-family: inherit;
+
+    @include sp {
+      position: absolute;
+      bottom: -256px;
+      left: 10%;
+      font-size: 3vw;
+    }
   }
 
   &__img1 {
-    width: 28vw;
-    height: 36vw;
     object-fit: cover;
     position: absolute;
-    bottom: 0;
     transform: rotate(4deg);
+
+    @include pc {
+      width: 28vw;
+      height: 36vw;
+      bottom: 0;
+    }
+
+    @include sp {
+      width: 67vw;
+      height: 80%;
+      left: 25%;
+    }
   }
 
   &__img2 {
-    width: 33vw;
-    height: 30vw;
+
     object-fit: cover;
     position: absolute;
-    bottom: 0;
     transform: rotate(-4deg);
+
+    @include pc {
+      width: 33vw;
+      height: 30vw;
+      bottom: 12px;
+      left: 11%;
+    }
+
+    @include sp {
+      width: 68vw;
+      height: 80%;
+      left: 25%;
+    }
   }
 
   &__img3 {
-    width: 28vw;
-    height: 36vw;
     object-fit: cover;
     position: absolute;
-    bottom: 0;
-    transform: rotate(-5deg);
+
+    @include pc {
+      width: 28vw;
+      height: 36vw;
+      bottom: 0;
+      transform: rotate(-5deg);
+    }
+
+    @include sp {
+      width: 64vw;
+      height: 80%;
+      left: 25%;
+      transform: rotate(5deg);
+    }
   }
 }
 
@@ -534,10 +615,17 @@ header {
   width: 100vw;
   height: 70vh;
   position: relative;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-bottom: 100px;
+
+  @include pc {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+
+  @include sp {
+    margin-bottom: 60vh;
+  }
 
   &__leftArea {
     width: 30vw;
@@ -549,13 +637,22 @@ header {
 
   &__title {
     position: absolute;
-    top: 0;
-    left: 20%;
-    font-size: 3.5rem;
     font-weight: 500;
     line-height: 0.8260869565;
     font-family: "Times New Roman";
     z-index: 3;
+
+    @include pc {
+      top: 0;
+      left: 20%;
+      font-size: 3.5rem;
+    }
+
+    @include sp {
+      bottom: -130px;
+      left: 15%;
+      font-size: 3rem;
+    }
   }
 
   &__title:before {
@@ -569,48 +666,109 @@ header {
     right: 0.1em;
     transform-origin: 0 50%;
     transform: translateY(-50%) rotate(45deg);
+
+    @include sp {
+      height: 150px;
+      top: -20%;
+      right: -0.55em;
+    }
   }
 
   &__subTitle {
     margin-top: 100px;
+
+    @include sp {
+      position: absolute;
+      bottom: -170px;
+      left: 10%;
+    }
   }
 
   &__text {
     color: #626262;
     font-size: 12px;
     font-family: inherit;
+
+    @include sp {
+      font-size: 3vw;
+      position: absolute;
+      bottom: -256px;
+      left: 10%;
+    }
   }
 
   &__img1 {
-    width: 28vw;
-    height: 36vw;
     object-fit: cover;
     position: absolute;
-    bottom: 0;
-    transform: rotate(-4deg);
+
+    @include pc {
+      width: 28vw;
+      height: 36vw;
+      bottom: 0;
+      transform: rotate(-4deg);
+    }
+
+    @include sp {
+      width: 80vw;
+      height: 90%;
+      top: 0;
+      left: 20%;
+      transform: rotate(-5deg);
+    }
   }
 
   &__img2 {
-    width: 33vw;
-    height: 30vw;
     object-fit: cover;
     position: absolute;
-    bottom: 0;
-    transform: rotate(-3deg);
+
+    @include pc {
+      width: 33vw;
+      height: 30vw;
+      bottom: 12px;
+      right: 12%;
+      transform: rotate(-3deg);
+    }
+
+    @include sp {
+      width: 80vw;
+      height: 90%;
+      top: 0;
+      left: 20%;
+      transform: rotate(4deg);
+    }
   }
 
   &__img3 {
-    width: 28vw;
-    height: 36vw;
     object-fit: cover;
     position: absolute;
-    bottom: 0;
-    transform: rotate(3deg);
+
+    @include pc {
+      width: 28vw;
+      height: 36vw;
+      bottom: 0;
+      transform: rotate(3deg);
+    }
+
+    @include sp {
+      width: 80vw;
+      height: 90%;
+      top: 0;
+      left: 20%;
+      transform: rotate(-5deg);
+    }
   }
 
   &__more a {
     text-decoration: none;
     color: #000;
+
+    @include sp {
+      position: absolute;
+      bottom: -70%;
+      right: -8%;
+      font-size: 3.2vw;
+      line-height: 2.5;
+    }
   }
 }
 
@@ -618,10 +776,17 @@ header {
   width: 100vw;
   position: relative;
   height: 70vh;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-bottom: 100px;
+
+  @include pc {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+
+  @include sp {
+    margin-bottom: 60vh;
+  }
 
   &__leftArea {
     width: 30vw;
@@ -633,13 +798,22 @@ header {
 
   &__title {
     position: absolute;
-    top: 0;
-    right: 20%;
-    font-size: 3.5rem;
     font-weight: 500;
     line-height: 0.8260869565;
     font-family: "Times New Roman";
     z-index: 3;
+
+    @include pc {
+      top: 0;
+      right: 20%;
+      font-size: 3.5rem;
+    }
+
+    @include sp {
+      bottom: -90px;
+      right: 5%;
+      font-size: 3rem;
+    }
   }
 
   &__title:before {
@@ -653,25 +827,56 @@ header {
     right: 0.1em;
     transform-origin: 0 50%;
     transform: translateY(-50%) rotate(45deg);
+
+    @include sp {
+      height: 150px;
+      top: -20%;
+      right: -0.55em;
+    }
   }
 
   &__subTitle {
     margin-top: 100px;
+
+    @include sp {
+      position: absolute;
+      bottom: -170px;
+      left: 10%;
+    }
   }
 
   &__text {
     color: #626262;
     font-size: 12px;
     font-family: inherit;
+
+    @include sp {
+      font-size: 3vw;
+      position: absolute;
+      bottom: -256px;
+      left: 10%;
+    }
   }
 
   &__img1 {
-    width: 30vw;
-    height: 36vw;
     object-fit: cover;
     position: absolute;
-    bottom: 0;
-    transform: rotate(1deg);
+
+    @include pc {
+      width: 30vw;
+      height: 36vw;
+      left: 16%;
+      bottom: -16px;
+      transform: rotate(1deg);
+    }
+
+    @include sp {
+      width: 80vw;
+      height: 90%;
+      top: 0;
+      left: 20%;
+      transform: rotate(-5deg);
+    }
   }
 
   &__img2 {
@@ -679,8 +884,20 @@ header {
     height: 30vw;
     object-fit: cover;
     position: absolute;
-    bottom: 0;
-    transform: rotate(4deg);
+
+    @include pc {
+      bottom: 12px;
+      left: 12%;
+      transform: rotate(4deg);
+    }
+
+    @include sp {
+      width: 80vw;
+      height: 90%;
+      top: 0;
+      left: 20%;
+      transform: rotate(4deg);
+    }
   }
 
   &__img3 {
@@ -688,13 +905,32 @@ header {
     height: 30vw;
     object-fit: cover;
     position: absolute;
-    bottom: 0;
-    transform: rotate(-3deg);
+
+    @include pc {
+      left: 12%;
+      transform: rotate(-3deg);
+    }
+
+    @include sp {
+      width: 80vw;
+      height: 90%;
+      top: 0;
+      left: 20%;
+      transform: rotate(-5deg);
+    }
   }
 
   &__more a {
     text-decoration: none;
     color: #000;
+
+    @include sp {
+      position: absolute;
+      bottom: -70%;
+      right: -8%;
+      font-size: 3.2vw;
+      line-height: 2.5;
+    }
   }
 }
 
@@ -702,10 +938,17 @@ header {
   width: 100vw;
   height: 70vh;
   position: relative;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-bottom: 100px;
+
+  @include pc {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+
+  @include sp {
+    margin-bottom: 60vh;
+  }
 
   &__leftArea {
     width: 30vw;
@@ -717,13 +960,22 @@ header {
 
   &__title {
     position: absolute;
-    top: 0;
-    left: 20%;
-    font-size: 3.5rem;
     font-weight: 500;
     line-height: 0.8260869565;
     font-family: "Times New Roman";
     z-index: 3;
+
+    @include pc {
+      top: 0;
+      left: 20%;
+      font-size: 3.5rem;
+    }
+
+    @include sp {
+      bottom: -130px;
+      left: 15%;
+      font-size: 3rem;
+    }
   }
 
   &__title:before {
@@ -737,39 +989,89 @@ header {
     right: 0.1em;
     transform-origin: 0 50%;
     transform: translateY(-50%) rotate(45deg);
+
+    @include sp {
+      height: 150px;
+      top: -20%;
+      right: -0.55em;
+    }
   }
 
   &__subTitle {
     margin-top: 100px;
+
+    @include sp {
+      position: absolute;
+      bottom: -170px;
+      left: 10%;
+    }
   }
 
   &__text {
     color: #626262;
     font-size: 12px;
     font-family: inherit;
+
+    @include sp {
+      font-size: 3vw;
+      position: absolute;
+      bottom: -215px;
+      left: 10%;
+    }
   }
 
   &__img1 {
     width: 28vw;
-    height: 36vw;
     object-fit: cover;
     position: absolute;
-    bottom: 0;
-    transform: rotate(1deg);
+
+    @include pc {
+      height: 36vw;
+      bottom: 0;
+      transform: rotate(1deg);
+    }
+
+    @include sp {
+      width: 80vw;
+      height: 90%;
+      top: 0;
+      left: 20%;
+      transform: rotate(-5deg);
+    }
   }
 
   &__img2 {
     width: 28vw;
-    height: 35vw;
     object-fit: cover;
     position: absolute;
-    bottom: 0;
-    transform: rotate(4deg);
+
+    @include pc {
+      height: 35vw;
+      bottom: 12px;
+      right: 12%;
+      transform: rotate(4deg);
+    }
+
+    @include sp {
+      width: 80vw;
+      height: 90%;
+      top: 0;
+      left: 20%;
+      transform: rotate(4deg);
+    }
   }
 
   &__more a {
     text-decoration: none;
     color: #000;
+
+    @include sp {
+      position: absolute;
+      bottom: -70%;
+      right: -8%;
+      font-size: 3.2vw;
+      line-height: 2.5;
+    }
   }
 }
 
@@ -777,10 +1079,17 @@ header {
   width: 100vw;
   position: relative;
   height: 70vh;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-bottom: 100px;
+
+  @include pc {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+
+  @include sp {
+    margin-bottom: 60vh;
+  }
 
   &__leftArea {
     width: 30vw;
@@ -792,13 +1101,22 @@ header {
 
   &__title {
     position: absolute;
-    top: 0;
-    right: 20%;
-    font-size: 3.5rem;
     font-weight: 500;
     line-height: 0.8260869565;
     font-family: "Times New Roman";
     z-index: 3;
+
+    @include pc {
+      top: 0;
+      right: 20%;
+      font-size: 3.5rem;
+    }
+
+    @include sp {
+      bottom: -90px;
+      right: 5%;
+      font-size: 3rem;
+    }
   }
 
   &__title:before {
@@ -812,48 +1130,111 @@ header {
     right: 0.1em;
     transform-origin: 0 50%;
     transform: translateY(-50%) rotate(45deg);
+
+    @include sp {
+      height: 150px;
+      top: -20%;
+      right: -0.55em;
+    }
   }
 
   &__subTitle {
     margin-top: 100px;
+
+    @include sp {
+      position: absolute;
+      bottom: -170px;
+      left: 10%;
+    }
   }
 
   &__text {
     color: #626262;
     font-size: 12px;
     font-family: inherit;
+
+    @include sp {
+      font-size: 3vw;
+      position: absolute;
+      bottom: -256px;
+      left: 10%;
+    }
   }
 
   &__img1 {
-    width: 28vw;
-    height: 36vw;
     object-fit: cover;
     position: absolute;
-    bottom: 0;
-    transform: rotate(4deg);
+
+    @include pc {
+      width: 28vw;
+      height: 36vw;
+      left: 16%;
+      bottom: -16px;
+      transform: rotate(4deg);
+    }
+
+    @include sp {
+      width: 80vw;
+      height: 90%;
+      top: 0;
+      left: 20%;
+      transform: rotate(-5deg);
+    }
   }
 
   &__img2 {
-    width: 28vw;
-    height: 36vw;
     object-fit: cover;
     position: absolute;
-    bottom: 0;
-    transform: rotate(-1deg);
+
+    @include pc {
+      width: 28vw;
+      height: 36vw;
+      bottom: 12px;
+      left: 12%;
+      transform: rotate(-1deg);
+    }
+
+    @include sp {
+      width: 80vw;
+      height: 90%;
+      top: 0;
+      left: 20%;
+      transform: rotate(4deg);
+    }
   }
 
   &__img3 {
-    width: 37vw;
-    height: 27vw;
     object-fit: cover;
     position: absolute;
-    bottom: 30px;
-    transform: rotate(-2deg);
+
+    @include pc {
+      width: 37vw;
+      height: 27vw;
+      left: 9%;
+      bottom: 30px;
+      transform: rotate(-2deg);
+    }
+
+    @include sp {
+      width: 80vw;
+      height: 90%;
+      top: 0;
+      left: 20%;
+      transform: rotate(-5deg);
+    }
   }
 
   &__more a {
     text-decoration: none;
     color: #000;
+
+    @include sp {
+      position: absolute;
+      bottom: -70%;
+      right: -8%;
+      font-size: 3.2vw;
+      line-height: 2.5;
+    }
   }
 }
 
@@ -861,10 +1242,17 @@ header {
   width: 100vw;
   height: 70vh;
   position: relative;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-bottom: 100px;
+
+  @include pc {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+
+  @include sp {
+    margin-bottom: 60vh;
+  }
 
   &__leftArea {
     width: 30vw;
@@ -876,13 +1264,22 @@ header {
 
   &__title {
     position: absolute;
-    top: 0;
-    left: 20%;
-    font-size: 3.5rem;
     font-weight: 500;
     line-height: 0.8260869565;
     font-family: "Times New Roman";
     z-index: 3;
+
+    @include pc {
+      top: 0;
+      left: 20%;
+      font-size: 3.5rem;
+    }
+
+    @include sp {
+      bottom: -130px;
+      left: 15%;
+      font-size: 3rem;
+    }
   }
 
   &__title:before {
@@ -896,39 +1293,90 @@ header {
     right: 0.1em;
     transform-origin: 0 50%;
     transform: translateY(-50%) rotate(45deg);
+
+    @include sp {
+      height: 150px;
+      top: -20%;
+      right: -0.55em;
+    }
   }
 
   &__subTitle {
     margin-top: 100px;
+
+    @include sp {
+      position: absolute;
+      bottom: -170px;
+      left: 10%;
+    }
   }
 
   &__text {
     color: #626262;
     font-size: 12px;
     font-family: inherit;
+
+    @include sp {
+      font-size: 3vw;
+      position: absolute;
+      bottom: -305px;
+      left: 10%;
+    }
   }
 
   &__img1 {
-    width: 36vw;
-    height: 27vw;
     object-fit: cover;
     position: absolute;
-    bottom: 30px;
-    transform: rotate(4deg);
+
+    @include pc {
+      width: 32vw;
+      height: 27vw;
+      right: 74px;
+      bottom: 30px;
+      transform: rotate(4deg);
+    }
+
+    @include sp {
+      width: 80vw;
+      height: 90%;
+      top: 0;
+      left: 20%;
+      transform: rotate(-5deg);
+    }
   }
 
   &__img2 {
-    width: 28vw;
-    height: 36vw;
     object-fit: cover;
     position: absolute;
-    bottom: 0;
-    transform: rotate(-1deg);
+
+    @include pc {
+      width: 28vw;
+      height: 36vw;
+      right: 90px;
+      bottom: 0;
+      transform: rotate(-1deg);
+    }
+
+    @include sp {
+      width: 80vw;
+      height: 90%;
+      top: 0;
+      left: 20%;
+      transform: rotate(4deg);
+    }
   }
 
   &__more a {
     text-decoration: none;
     color: #000;
+
+    @include sp {
+      position: absolute;
+      bottom: -80%;
+      right: -8%;
+      font-size: 3.2vw;
+      line-height: 2.5;
+    }
   }
 }
 
@@ -937,10 +1385,17 @@ header {
   height: 70vh;
   background-color: #e0dad4;
   position: relative;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding-bottom: 100px;
+
+  @include pc {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+
+  @include sp {
+    margin: 0;
+  }
 
   &__title {
     position: absolute;
@@ -951,6 +1406,11 @@ header {
     line-height: 0.8260869565;
     font-family: "Times New Roman";
     z-index: 3;
+
+    @include sp {
+      left: 10%;
+      font-size: 3rem;
+    }
   }
 
   &__title:before {
@@ -964,6 +1424,11 @@ header {
     right: 0.1em;
     transform-origin: 0 50%;
     transform: translateY(-50%) rotate(45deg);
+
+    @include sp {
+      height: 150px;
+      top: -20%;
+    }
   }
 
   &__list ul {
@@ -974,6 +1439,11 @@ header {
     list-style: none;
     margin-top: 113px;
     padding-inline-start: 0;
+
+    @include sp {
+      width: 100vw;
+      overflow: hidden;
+    }
   }
 
   & img {
@@ -981,6 +1451,10 @@ header {
     height: 160px;
     margin-top: 56px;
     object-fit: cover;
+
+    @include sp {
+      width: 60vw;
+    }
   }
 
   & span {
@@ -993,6 +1467,29 @@ header {
     text-align: left;
     font-size: 12px;
   }
+
+  &__prev {
+    font-family: icomoon !important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+
+    @include pc {
+      display: none;
+    }
+  }
+
+  &__prev:before {
+    content: "";
+    text-decoration: inherit;
+    vertical-align: inherit;
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+  }
 }
 
 .p-access {
@@ -1000,15 +1497,28 @@ header {
   position: relative;
   margin-bottom: 100px;
 
+  @include sp {
+    margin: 10vh 0;
+  }
+
   &__title {
     position: absolute;
-    top: 50px;
-    left: 20%;
-    font-size: 3.5rem;
     font-weight: 500;
     line-height: 0.8260869565;
     font-family: "Times New Roman";
     z-index: 3;
+
+    @include pc {
+      top: 50px;
+      left: 20%;
+      font-size: 3.5rem;
+    }
+
+    @include sp {
+      top: 0;
+      left: 15%;
+      font-size: 3rem;
+    }
   }
 
   &__title:before {
@@ -1022,6 +1532,12 @@ header {
     right: 0.1em;
     transform-origin: 0 50%;
     transform: translateY(-50%) rotate(45deg);
+
+    @include sp {
+      height: 150px;
+      top: -20%;
+      right: -0.55em;
+    }
   }
 
   &__top {
@@ -1076,6 +1592,12 @@ header {
 
   &__rightArea img {
     width: 45vw;
+
+    @include sp {
+      width: 80vw;
+      top: 0;
+      left: 20%;
+    }
   }
 
   &__bottom {
@@ -1268,6 +1790,10 @@ header {
     background-color: black;
     padding: 100px;
     margin: 16px 0 0 250px;
+
+    @include sp {
+      margin: 16px 0 0 36px;
+    }
   }
 
   &__hotels {
