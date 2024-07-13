@@ -905,6 +905,7 @@ header {
 }
 @media screen and (min-width: 768px) {
   .p-stay__img3 {
+    bottom: 12px;
     left: 12%;
     transform: rotate(-3deg);
   }
@@ -1397,7 +1398,7 @@ header {
 
 .p-journal {
   width: 100vw;
-  height: 70vh;
+  height: 90vh;
   background-color: #e0dad4;
   position: relative;
 }
@@ -1426,6 +1427,7 @@ header {
 }
 @media screen and (max-width: 768px) {
   .p-journal__title {
+    top: 48px;
     left: 10%;
     font-size: 3rem;
   }
@@ -1459,6 +1461,7 @@ header {
 }
 @media screen and (max-width: 768px) {
   .p-journal__list ul {
+    position: absolute;
     width: 100vw;
     overflow: hidden;
   }
@@ -1483,28 +1486,6 @@ header {
   color: #000;
   text-align: left;
   font-size: 12px;
-}
-.p-journal__prev {
-  font-family: icomoon !important;
-  speak: none;
-  font-style: normal;
-  font-weight: 400;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-}
-@media screen and (min-width: 768px) {
-  .p-journal__prev {
-    display: none;
-  }
-}
-.p-journal__prev:before {
-  content: "\e903";
-  text-decoration: inherit;
-  vertical-align: inherit;
-  background-repeat: no-repeat;
-  box-sizing: inherit;
 }
 
 .p-access {
@@ -1559,14 +1540,33 @@ header {
 }
 .p-access__top {
   display: flex;
-  justify-content: center;
-  gap: 6vw;
-  align-items: center;
   padding-top: 180px;
+}
+@media screen and (min-width: 768px) {
+  .p-access__top {
+    justify-content: center;
+    gap: 6vw;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .p-access__top {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
 }
 .p-access__leftArea {
   font-size: 12px;
-  padding-top: 300px;
+}
+@media screen and (min-width: 768px) {
+  .p-access__leftArea {
+    padding-top: 300px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .p-access__leftArea {
+    padding-left: 10%;
+  }
 }
 .p-access__leftArea p:nth-child(4),
 .p-access :nth-child(5) {
@@ -1605,17 +1605,31 @@ header {
 }
 @media screen and (max-width: 768px) {
   .p-access__rightArea img {
-    width: 80vw;
-    top: 0;
-    left: 20%;
+    width: 100vw;
   }
 }
 .p-access__bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 12px;
-  padding-top: 100px;
+}
+@media screen and (min-width: 768px) {
+  .p-access__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .p-access__bottom {
+    padding: 100px 10%;
+  }
+}
+.p-access__bottom ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
+.p-access__bottom ul:first-child {
+  margin-bottom: 8%;
 }
 
 .p-bottomMenu {
@@ -1665,8 +1679,8 @@ header {
 }
 @media screen and (max-width: 768px) {
   .p-bottomMenu__accessTitle {
-    font-size: 22px;
-    top: calc(50% - 13px);
+    font-size: 12px;
+    top: calc(50% - 6px);
   }
 }
 .p-bottomMenu__cafeBar {
@@ -1703,8 +1717,8 @@ header {
 }
 @media screen and (max-width: 768px) {
   .p-bottomMenu__cafeBarTitle {
-    font-size: 22px;
-    top: calc(50% - 13px);
+    font-size: 12px;
+    top: calc(50% - 6px);
   }
 }
 
@@ -1714,8 +1728,21 @@ header {
   color: #fff;
   font-size: 11px;
 }
-.l-footer__top {
-  padding: 100px 0 0 250px;
+@media screen and (max-width: 768px) {
+  .l-footer {
+    position: relative;
+    padding-top: 1px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .l-footer__top {
+    padding: 100px 0 0 250px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .l-footer__top {
+    padding-left: 10%;
+  }
 }
 .l-footer a {
   color: #fff;
@@ -1723,6 +1750,13 @@ header {
 }
 .l-footer__logo {
   width: 120px;
+}
+@media screen and (max-width: 768px) {
+  .l-footer__logo {
+    position: absolute;
+    top: 60px;
+    right: 10%;
+  }
 }
 @media screen and (min-width: 768px) {
   .l-footer__flex {
@@ -1740,6 +1774,16 @@ header {
     margin-bottom: 50px;
   }
 }
+@media screen and (max-width: 768px) {
+  .l-footer__leftInfo1 {
+    padding-top: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .l-footer__leftInfo2 {
+    display: none;
+  }
+}
 .l-footer__leftInfo2 img {
   width: 14px;
 }
@@ -1752,6 +1796,11 @@ header {
     display: flex;
     gap: 2vw;
     align-items: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .l-footer__menuList {
+    display: none;
   }
 }
 .l-footer__menuList ul {
@@ -1783,16 +1832,25 @@ header {
 }
 @media screen and (max-width: 768px) {
   .l-footer__others {
-    margin: 16px 0 0 36px;
+    margin: 16px 0 0 10%;
+    padding: 60px 10%;
   }
+}
+.l-footer__hotels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 @media screen and (min-width: 768px) {
   .l-footer__hotels {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     gap: 4vw;
     margin-top: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .l-footer__hotels {
+    gap: 8vw;
+    padding-inline-start: 0;
   }
 }
 .l-footer__hotels a:hover {
@@ -1800,11 +1858,20 @@ header {
   transition: all 0.1s;
 }
 .l-footer__hotels li {
-  width: 20%;
   list-style: none;
+}
+@media screen and (min-width: 768px) {
+  .l-footer__hotels li {
+    width: 20%;
+  }
 }
 .l-footer__hotels li img {
   width: 80px;
+}
+@media screen and (max-width: 768px) {
+  .l-footer__hotels li img {
+    width: 20vw;
+  }
 }
 .l-footer small {
   margin-left: 250px;

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href= "assets/css/style.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
     <title>responsive-site</title>
   </head>
   <body>
@@ -183,7 +185,7 @@
             <ul>
               <a href="">
                 <li>
-                <img class=p-journal__img1 src="./assets/img/room2.jpg">
+                <img class="p-journal__img1" src="./assets/img/room2.jpg">
                     <span>Event</span>
                     <span>2024.07.02</span>
                   <p>~8月のスケジュール~</p>
@@ -191,7 +193,7 @@
               </a>
               <a href="">
                 <li>
-                  <img class=p-journal__img2 src="./assets/img/sauna_r.jpg">
+                  <img class="p-journal__img2" src="./assets/img/sauna_r.jpg">
                     <span>Event</span>
                     <span>2024.06.13</span>
                     <p>サウナ貸切プランもございます</p>
@@ -199,7 +201,7 @@
               </a>
               <a href="">
                 <li>
-                  <img class=p-journal__img3 src="./assets/img/pool_nt.jpg">
+                  <img class="p-journal__img3" src="./assets/img/pool_nt.jpg">
                       <span>Event</span>
                       <span>2024.06.4</span>
                     <p>~７月のスケジュール~</p>
@@ -207,7 +209,6 @@
               </a>
             </ul>
           </div>
-          <div class="p-journal__prev"></div>
         </section>
 
         <section class="p-access">
@@ -309,7 +310,7 @@
 
         <small>Copyright © Gran Favorita. All rights reserved.</small>
         <div class="l-footer__others">
-          <span class="l-footer__othersTitle">Our Hotels</span>
+          <span class="l-footer__othersTitle">Our Hotels & Shops</span>
           <ul class="l-footer__hotels">
             <li><a href=""><img class="hotel1" src="./assets/img/oth1.png"></a></li>
             <li><a href=""><img class="hotel2" src="./assets/img/oth2.png"></a></li>
@@ -323,5 +324,13 @@
         </div>
       </footer>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+      $('.slider').slick({
+        dots: true,
+      });
+    </script>
   </body>
 </html>
