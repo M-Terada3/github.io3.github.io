@@ -74,7 +74,7 @@ header {
       font-size: 16px;
 
       & a {
-        color: black;
+        color: #000;
         text-decoration: none;
       }
     }
@@ -83,23 +83,220 @@ header {
   &__hamMenu {
     margin: 18px 30px 0 0;
   }
+}
 
-  &__hamburgerBox {
-    width: 100vw;
+.hamBtn {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  right: 12px;
+  cursor:pointer;
+}
+
+.ham_fixBtn {
+  width: 100%;
+  width: 36px;
+  height: 36px;
+  position: fixed;
+  top: 60px;
+  right: 12px;
+  z-index: 5;
+  display: none;
+}
+
+.hamBar {
+  width: 36px;
+  height: 2px;
+  display: block;
+  position: absolute;
+  right: 0;
+  transform: translateX(-50%);
+  background-color: #000;
+}
+
+.hamBar-top {
+  top: 10px;
+}
+
+.hamBar-middle {
+  top: 16.5px;
+}
+
+.hamBar-bottom {
+  bottom: 10px;
+}
+
+.hamBtn.close .hamBar-top {
+  transform: translate(-50%, 6px) rotate(45deg);
+  transition: transform 0.3s;
+}
+
+.hamBtn.close .hamBar-middle {
+  display: none;
+}
+
+.hamBtn.close .hamBar-bottom {
+  transform: translate(-50%, -8px) rotate(-45deg);
+  transition: transform 0.3s;
+}
+
+.ham_fixBtn.close .hamBar-top {
+  transform: translate(-50%, 6px) rotate(45deg);
+  transition: transform 0.3s;
+}
+
+.ham_fixBtn.close .hamBar-middle {
+  display: none;
+}
+
+.ham_fixBtn.close .hamBar-bottom {
+  transform: translate(-50%, -8px) rotate(-45deg);
+  transition: transform 0.3s;
+}
+
+
+.l-hamburger {
+  top: 0;
+  position: fixed;
+  left: 0;
+  z-index: 999;
+  display: none;
+
+  @include sp {
+    width: 100%;
+  }
+
+  &__topFlex {
+    padding: 50px 0;
+
+    @include pc {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    @include sp {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+
+  &__telephone {
+    font-size: 12px;
+  }
+
+  &__telephoneNum {
+    font-size: 16px;
+    border-bottom: 1px solid #000;
+    margin-left: 5px;
+  }
+
+  &__middleFlex {
+    display: flex;
+    justify-content: center;
+
+    @include pc {
+      gap: 5vw;
+    }
+  }
+
+  &__middle {
+
+    & ul {
+      padding-inline-start: 0;
+    }
+
+    @include pc {
+      display: grid;
+    }
+
+    @include sp {
+      width: 40%;
+    }
+  }
+
+  &__box {
     background-color: #fff;
-    opacity: 0.8;
-    z-index: 10;
+    opacity: 0.9;
+
+    @include pc {
+      width: 100vw;
+      height: 68vh;
+    }
+
+    & ul li {
+      list-style: none;
+
+      & a {
+        text-decoration: none;
+        color: #000;
+      }
+    }
+  }
+
+  &__leftList1 {
+    @include pc {
+      display: flex;
+      justify-content: center;
+      gap: 4vw;
+    }
+
+    & p {
+      font-size: 12px;
+      line-height: 0.5;
+    }
+  }
+
+  &__leftList--pc {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    gap: 1vw;
+
+    @include sp {
+      display: none;
+    }
+
+    & img {
+      width: 16px;
+      vertical-align: middle;
+    }
+
+    & li:first-child {
+      border-bottom: 1px solid #000;
+    }
+  }
+
+  &__leftList--sp {
+    font-size: 12px;
+    padding-inline-start: 0;
+    padding-top: 16px;
+
+    & img {
+      width: 16px;
+      vertical-align: middle;
+    }
 
     @include pc {
       display: none;
     }
+  }
+
+  &__rightList li {
+    font-size: 12px;
+  }
+
+  &__hamMenu_wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1px;
+    opacity: 0.9;
 
     @include sp {
-      display: none; //一旦隠す
-    }
-
-    & ul {
-      display: flex;
+      height: 0.4px;
     }
   }
 }
@@ -111,6 +308,7 @@ header {
   bottom: 5%;
   right: 10%;
   z-index: 9;
+  text-align: center;
 
   @include sp {
     width: 40vw;
@@ -119,12 +317,10 @@ header {
   }
 
   &:hover {
-    opacity: 0.8;
-    transition: all 0.1s;
-  }
-
-  &__img {
-    position: relative;
+    @include pc {
+      opacity: 0.8;
+      transition: all 0.1s;
+    }
   }
 
   &__text {
@@ -1386,33 +1582,24 @@ header {
   height: 90vh;
   background-color: #e0dad4;
   position: relative;
-
-  @include pc {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-bottom: 100px;
-  }
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 100px;
 
   @include sp {
-    margin: 0;
+    display: none;
   }
 
   &__title {
     position: absolute;
-    top: 0;
+    top: 30px;
     left: 20%;
     font-size: 3.5rem;
     font-weight: 500;
     line-height: 0.8260869565;
     font-family: "Times New Roman";
     z-index: 3;
-
-    @include sp {
-      top: 48px;
-      left: 10%;
-      font-size: 3rem;
-    }
   }
 
   &__title:before {
@@ -1426,11 +1613,6 @@ header {
     right: 0.1em;
     transform-origin: 0 50%;
     transform: translateY(-50%) rotate(45deg);
-
-    @include sp {
-      height: 150px;
-      top: -20%;
-    }
   }
 
   &__list ul {
@@ -1441,12 +1623,6 @@ header {
     list-style: none;
     margin-top: 113px;
     padding-inline-start: 0;
-
-    @include sp {
-      position: absolute;
-      width: 100vw;
-      overflow: hidden;
-    }
   }
 
   & img {
@@ -1454,10 +1630,6 @@ header {
     height: 160px;
     margin-top: 56px;
     object-fit: cover;
-
-    @include sp {
-      width: 60vw;
-    }
   }
 
   & span {
@@ -1472,10 +1644,71 @@ header {
   }
 }
 
-// .slider img {
-//   width: 100%;
-//   height: 40vh;
-// }
+.p-journal__sp {
+  width: 100vw;
+  height: 90vh;
+  background-color: #e0dad4;
+  position: relative;
+  margin: 0;
+
+  @include pc {
+    display: none;
+  }
+
+  &--title {
+    position: absolute;
+    top: 30px;
+    left: 10%;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 0.8260869565;
+    font-family: "Times New Roman";
+    z-index: 3;
+  }
+
+  &--title:before {
+    content: "";
+    display: block;
+    background-color: #626262;
+    width: 1px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    right: 0.1em;
+    transform-origin: 0 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  & span {
+    border-bottom: 1px solid #000;
+  }
+
+  & a {
+    text-decoration: none;
+    color: #000;
+    text-align: left;
+    font-size: 12px;
+  }
+}
+
+.slider {
+  margin: 0 auto;
+  display: flex;
+  max-width: 500px;
+  width: 80%;
+}
+.slider-img {
+  margin: 0 10px;
+}
+.slider-img img {
+  width: 100%;
+  height: 220px;
+  margin-top: 150px;
+  object-fit: cover;
+}
+.slick-prev ,.slick-next {
+  margin-top: 50px;
+}
 
 .p-access {
   width: 100vw;
@@ -1572,8 +1805,11 @@ header {
     position: relative;
 
     &:hover {
-      color: #fff;
-      background-color: #000;
+
+      @include pc {
+        color: #fff;
+        background-color: #000;
+      }
     }
   }
 
@@ -1605,6 +1841,7 @@ header {
       display: flex;
       justify-content: center;
       align-items: center;
+      gap: 5vw;
       padding-top: 100px;
     }
 
@@ -1775,6 +2012,8 @@ header {
 
     @include sp {
       padding-top: 60px;
+      line-height: 0.5;
+      margin-bottom: 30px;
     }
 
   }
@@ -1789,9 +2028,24 @@ header {
     width: 14px;
   }
 
+  &__rightInfo {
+    @include sp {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__rightInfo p {
+    @include sp {
+      line-height: 0.1;
+    }
+  }
+
   &__rightInfo a:hover {
-    opacity: 0.7;
-    transition: all 0.1s;
+
+    @include pc {
+      opacity: 0.7;
+      transition: all 0.1s;
+    }
   }
 
   &__menuList {
@@ -1815,8 +2069,10 @@ header {
     list-style: none;
 
     & a:hover {
-      opacity: 0.7;
-      transition: all 0.1s;
+      @include pc {
+        opacity: 0.7;
+        transition: all 0.1s;
+      }
     }
   }
 
@@ -1862,8 +2118,10 @@ header {
     }
 
     & a:hover {
-      opacity: 0.7;
-      transition: all 0.1s;
+      @include pc {
+        opacity: 0.7;
+        transition: all 0.1s;
+      }
     }
 
     & li {
@@ -1884,6 +2142,16 @@ header {
   }
 
   & small {
-    margin-left: 250px;
+
+    @include pc {
+      margin-left: 250px;
+    }
+
+    @include sp {
+      margin-left: 10%;
+    }
   }
+}
+.no_wrap {
+  white-space: nowrap
 }
