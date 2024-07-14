@@ -61,9 +61,31 @@ header {
 .l-pcHeader__nav li {
   font-size: 16px;
 }
+@media screen and (min-width: 768px) {
+  .l-pcHeader__nav li {
+    position: relative;
+  }
+}
 .l-pcHeader__nav li a {
   color: #000;
   text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .l-pcHeader__nav li::before {
+    background-color: #000;
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    left: 45%;
+    transform: scale(0, 1);
+    transition: transform 0.3s;
+  }
+  .l-pcHeader__nav li:hover::before {
+    transform: scale(1, 1);
+  }
 }
 .l-pcHeader__hamMenu {
   margin: 18px 30px 0 0;
@@ -73,8 +95,9 @@ header {
   width: 36px;
   height: 36px;
   position: absolute;
-  right: 12px;
+  top: 12px;
   cursor: pointer;
+  margin-top: 30px;
 }
 
 .ham_fixBtn {
@@ -277,16 +300,17 @@ header {
 .p-reservation {
   width: 16vw;
   display: block;
-  position: fixed;
   bottom: 5%;
   right: 10%;
   z-index: 9;
   text-align: center;
+  transform: translate(-50%, -50%);
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   .p-reservation {
     width: 40vw;
-    right: -25px;
+    right: 25px;
     bottom: 32%;
   }
 }
@@ -297,17 +321,22 @@ header {
   }
 }
 .p-reservation__text {
-  position: absolute;
   bottom: 46%;
   right: 22%;
   color: #fff;
   font-size: 1.3vw;
   font-weight: 700;
   z-index: 10;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1.8rem;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 @media screen and (max-width: 768px) {
   .p-reservation__text {
-    font-size: 3.3vw;
+    font-size: 3vw;
   }
 }
 
@@ -1647,7 +1676,7 @@ header {
 
 .p-journal__sp {
   width: 100vw;
-  height: 90vh;
+  height: 80vh;
   background-color: #e0dad4;
   position: relative;
   margin: 0;
@@ -1791,10 +1820,6 @@ header {
   .p-access__leftArea {
     padding-left: 10%;
   }
-}
-.p-access__leftArea p:nth-child(4),
-.p-access :nth-child(5) {
-  font-weight: 700;
 }
 .p-access__leftArea p:nth-child(5) {
   margin-bottom: 40px;

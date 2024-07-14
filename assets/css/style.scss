@@ -73,9 +73,32 @@ header {
     & li {
       font-size: 16px;
 
+      @include pc {
+        position: relative;
+      }
+
       & a {
         color: #000;
         text-decoration: none;
+      }
+    }
+
+    @include pc {
+      & li::before {
+        background-color: #000;
+        content: "";
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        position: absolute;
+        top: -10px;
+        left: 45%;
+        transform: scale(0, 1);
+        transition: transform 0.3s;
+      }
+
+      & li:hover::before {
+        transform: scale(1, 1);
       }
     }
   }
@@ -89,8 +112,9 @@ header {
   width: 36px;
   height: 36px;
   position: absolute;
-  right: 12px;
+  top: 12px;
   cursor:pointer;
+  margin-top: 30px;
 }
 
 .ham_fixBtn {
@@ -304,15 +328,17 @@ header {
 .p-reservation {
   width: 16vw;
   display: block;
-  position: fixed;
+  // position: fixed;
   bottom: 5%;
   right: 10%;
   z-index: 9;
   text-align: center;
+  transform: translate(-50%,-50%);
+  position: relative;
 
   @include sp {
     width: 40vw;
-    right: -25px;
+    right: 25px;
     bottom: 32%;
   }
 
@@ -324,16 +350,23 @@ header {
   }
 
   &__text {
-    position: absolute;
     bottom: 46%;
     right: 22%;
     color: #fff;
     font-size: 1.3vw;
     font-weight: 700;
     z-index: 10;
+    position: absolute;
+    // top: 50%;
+    // left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 1.8rem;
+    margin: 0!important;
+    padding: 0!important;
 
     @include sp {
-      font-size: 3.3vw;
+      font-size: 3vw;
     }
   }
 }
@@ -1646,7 +1679,7 @@ header {
 
 .p-journal__sp {
   width: 100vw;
-  height: 90vh;
+  height: 80vh;
   background-color: #e0dad4;
   position: relative;
   margin: 0;
@@ -1784,11 +1817,6 @@ header {
     @include sp {
       padding-left: 10%;
     }
-  }
-
-  &__leftArea p:nth-child(4),
-  :nth-child(5) {
-    font-weight: 700;
   }
 
   &__leftArea p:nth-child(5) {
@@ -2153,5 +2181,5 @@ header {
   }
 }
 .no_wrap {
-  white-space: nowrap
+  white-space: nowrap;
 }
