@@ -13,9 +13,12 @@
     <div class="l-wrap">
       <header>
         <div class="l-pcHeader">
+          <div class="l-hamburger__hamMenu_wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,192L48,192C96,192,192,192,288,208C384,224,480,256,576,229.3C672,203,768,117,864,101.3C960,85,1056,139,1152,170.7C1248,203,1344,213,1392,218.7L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+          </div>
           <a href=""><img class="logo" src="./assets/img/logo.png" alt="logo"></a>
           <div>
-            <ul class="l-pcHeader__nav">
+            <ul class="l-pcHeader__nav" id="fixNav">
               <li><a href="">Top</a></li>
               <li><a href="">Cafe&Bar</a></li>
               <li><a href="">Stay</a></li>
@@ -24,10 +27,8 @@
               <li><a href="">Access</a></li>
             </ul>
           </div>
-          <!-- <div class="l-pcHeader__hamMenu">Menu</div> -->
 
-
-          <div class="l-spHeader__hamburgerNav">
+          <div id="hamNav">
             <div class="hamBtn">
               <span class="hamBar hamBar-top"></span>
               <span class="hamBar hamBar-middle"></span>
@@ -135,7 +136,7 @@
         </section>
 
         <section class="p-cafeBar">
-          <div class="p-cafeBar__leftArea">
+          <div class="p-cafeBar__leftArea img-wrap">
             <img class="p-cafeBar__img1" src="./assets/img/bar_img.jpg" alt="image">
             <img class="p-cafeBar__img2" src="./assets/img/hotel dinner.jpg" alt="image">
             <img class="p-cafeBar__img3" src="./assets/img/cafe_img.jpg" alt="image">
@@ -152,7 +153,9 @@
             <h2 class="p-menu__title">Menu</h2>
             <h4 class="p-menu__subTitle">新鮮な食材を使用したメニュー</h4>
             <span class="p-menu__text">地元の新鮮な野菜や三浦産の海鮮を使ったこだわりの料理を堪能することができます。期間限定のメニューや、誕生日・記念日プランもご用意しております。</span>
-            <p class="p-menu__more"><a href="">Read more</a></p>
+            <p class="p-menu__more">
+              <a href="">Read more</a>
+            </p>
           </div>
           <div class="p-menu__rightArea">
             <img class="p-menu__img1" src="./assets/img/salmon.jpg" alt="image">

@@ -17,10 +17,6 @@ body {
   letter-spacing: 0.075em;
 }
 
-// * {
-//   outline: 2px solid blue;
-// }
-
 .l-wrap {
   @include sp {
     width: 100%;
@@ -33,11 +29,10 @@ img {
 }
 
 header {
-  padding: 80px 50px;
+  padding: 40px 50px 80px;
 
   @include sp {
     padding: 30px 0 30px 30px;
-    width: 100%;
   }
 }
 
@@ -52,7 +47,7 @@ header {
 }
 
 .l-pcHeader {
-  height: 80px;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -62,9 +57,16 @@ header {
   }
 
   &__nav {
+    position: fixed;
+    top: 0;
+    left: 25%;
     display: flex;
+    align-items: center;
     list-style: none;
     gap: 24px;
+    z-index: 6;
+    height: 100px;
+    transition: 0.5s;
 
     @include sp {
       display: none;
@@ -102,19 +104,16 @@ header {
       }
     }
   }
-
-  &__hamMenu {
-    margin: 18px 30px 0 0;
-  }
 }
 
 .hamBtn {
   width: 36px;
   height: 36px;
-  position: absolute;
-  top: 12px;
-  cursor:pointer;
-  margin-top: 30px;
+  position: fixed;
+  top: 50px;
+  right: 5%;
+  z-index: 999;
+  cursor: pointer;
 }
 
 .ham_fixBtn {
@@ -122,14 +121,14 @@ header {
   width: 36px;
   height: 36px;
   position: fixed;
-  top: 60px;
-  right: 12px;
-  z-index: 5;
+  top: 0;
+  right: 0;
+  z-index: 999;
   display: none;
 }
 
 .hamBar {
-  width: 36px;
+  width: 26px;
   height: 2px;
   display: block;
   position: absolute;
@@ -152,7 +151,7 @@ header {
 
 .hamBtn.close .hamBar-top {
   transform: translate(-50%, 6px) rotate(45deg);
-  transition: transform 0.3s;
+  transition: transform 0.8s;
 }
 
 .hamBtn.close .hamBar-middle {
@@ -161,12 +160,12 @@ header {
 
 .hamBtn.close .hamBar-bottom {
   transform: translate(-50%, -8px) rotate(-45deg);
-  transition: transform 0.3s;
+  transition: transform 0.8s;
 }
 
 .ham_fixBtn.close .hamBar-top {
   transform: translate(-50%, 6px) rotate(45deg);
-  transition: transform 0.3s;
+  transition: transform 0.8s;
 }
 
 .ham_fixBtn.close .hamBar-middle {
@@ -175,15 +174,14 @@ header {
 
 .ham_fixBtn.close .hamBar-bottom {
   transform: translate(-50%, -8px) rotate(-45deg);
-  transition: transform 0.3s;
+  transition: transform 0.8s;
 }
-
 
 .l-hamburger {
   top: 0;
   position: fixed;
   left: 0;
-  z-index: 999;
+  z-index: 998;
   display: none;
 
   @include sp {
@@ -327,18 +325,14 @@ header {
 
 .p-reservation {
   width: 16vw;
-  display: block;
-  // position: fixed;
-  bottom: 5%;
-  right: 10%;
+  position: fixed;
+  bottom: 36px;
+  right: 123px;
   z-index: 9;
-  text-align: center;
-  transform: translate(-50%,-50%);
-  position: relative;
 
   @include sp {
     width: 40vw;
-    right: 25px;
+    right: -25px;
     bottom: 32%;
   }
 
@@ -350,20 +344,15 @@ header {
   }
 
   &__text {
-    bottom: 46%;
-    right: 22%;
+    bottom: 48%;
     color: #fff;
+    right: -10px;
     font-size: 1.3vw;
     font-weight: 700;
     z-index: 10;
     position: absolute;
-    // top: 50%;
-    // left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0%);
     color: #fff;
-    font-size: 1.8rem;
-    margin: 0!important;
-    padding: 0!important;
 
     @include sp {
       font-size: 3vw;
@@ -374,11 +363,12 @@ header {
 .l-topArea {
   position: relative;
   height: 700px;
-  margin: 10px 30px 50px;
+  margin: 10px 0 50px 30px;
 
   @include sp {
     width: 100vw;
     height: 600px;
+    margin: 10px 0 50px;
   }
 
   &__title {
@@ -393,7 +383,7 @@ header {
 
     @include sp {
       font-size: 4.5rem;
-      left: -20px;
+      left: 20px;
       top: 5%;
     }
   }
@@ -684,14 +674,14 @@ header {
     height: 40vw;
     position: absolute;
     bottom: 0;
-    right: 3%;
+    right: 0;
     z-index: 1;
 
     @include sp {
       width: 45vw;
       height: 45vh;
       bottom: -46%;
-      right: -30px;
+      right: 0;
     }
   }
 }
@@ -735,8 +725,8 @@ header {
 
     @include sp {
       bottom: -50px;
-      right: 5%;
-      font-size: 3rem;
+      right: 24%;
+      font-size: 2.5rem;
     }
   }
 
@@ -794,9 +784,9 @@ header {
     }
 
     @include sp {
-      width: 67vw;
+      width: 68vw;
       height: 80%;
-      left: 25%;
+      left: 20%;
     }
   }
 
@@ -816,7 +806,7 @@ header {
     @include sp {
       width: 68vw;
       height: 80%;
-      left: 25%;
+      left: 20%;
     }
   }
 
@@ -832,13 +822,15 @@ header {
     }
 
     @include sp {
-      width: 64vw;
+      width: 68vw;
       height: 80%;
-      left: 25%;
+      left: 20%;
       transform: rotate(5deg);
     }
   }
 }
+
+
 
 .p-menu {
   width: 100vw;
@@ -938,7 +930,7 @@ header {
     }
 
     @include sp {
-      width: 80vw;
+      width: 68vw;
       height: 90%;
       top: 0;
       left: 20%;
@@ -959,7 +951,7 @@ header {
     }
 
     @include sp {
-      width: 80vw;
+      width: 68vw;
       height: 90%;
       top: 0;
       left: 20%;
@@ -979,7 +971,7 @@ header {
     }
 
     @include sp {
-      width: 80vw;
+      width: 68vw;
       height: 90%;
       top: 0;
       left: 20%;
@@ -991,13 +983,36 @@ header {
     text-decoration: none;
     color: #000;
 
+    @include pc {
+      position: relative;
+    }
+
     @include sp {
       position: absolute;
       bottom: -70%;
-      right: -8%;
+      right: 3%;
       font-size: 3.2vw;
       line-height: 2.5;
     }
+  }
+  &__more a::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/wave.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    transform: scale(0, 1);
+    transition: transform 0.1s;
+  }
+
+  &__more a:hover::before {
+    transform: scale(1, 1);
+    transition: transform 0.1s;
   }
 }
 
@@ -1040,7 +1055,7 @@ header {
 
     @include sp {
       bottom: -90px;
-      right: 5%;
+      right: 24%;
       font-size: 3rem;
     }
   }
@@ -1100,7 +1115,7 @@ header {
     }
 
     @include sp {
-      width: 80vw;
+      width: 68vw;
       height: 90%;
       top: 0;
       left: 20%;
@@ -1121,7 +1136,7 @@ header {
     }
 
     @include sp {
-      width: 80vw;
+      width: 68vw;
       height: 90%;
       top: 0;
       left: 20%;
@@ -1142,7 +1157,7 @@ header {
     }
 
     @include sp {
-      width: 80vw;
+      width: 68vw;
       height: 90%;
       top: 0;
       left: 20%;
@@ -1154,13 +1169,36 @@ header {
     text-decoration: none;
     color: #000;
 
+    @include pc {
+      position: relative;
+    }
+
     @include sp {
       position: absolute;
       bottom: -70%;
-      right: -8%;
+      right: 3%;
       font-size: 3.2vw;
       line-height: 2.5;
     }
+  }
+  &__more a::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/wave.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    transform: scale(0, 1);
+    transition: transform 0.1s;
+  }
+
+  &__more a:hover::before {
+    transform: scale(1, 1);
+    transition: transform 0.1s;
   }
 }
 
@@ -1262,7 +1300,7 @@ header {
     }
 
     @include sp {
-      width: 80vw;
+      width: 68vw;
       height: 90%;
       top: 0;
       left: 20%;
@@ -1283,7 +1321,7 @@ header {
     }
 
     @include sp {
-      width: 80vw;
+      width: 68vw;
       height: 90%;
       top: 0;
       left: 20%;
@@ -1295,13 +1333,37 @@ header {
     text-decoration: none;
     color: #000;
 
+    @include pc {
+      position: relative;
+    }
+
     @include sp {
       position: absolute;
       bottom: -70%;
-      right: -8%;
+      right: 3%;
       font-size: 3.2vw;
       line-height: 2.5;
     }
+  }
+
+  &__more a::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/wave.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    transform: scale(0, 1);
+    transition: transform 0.1s;
+  }
+
+  &__more a:hover::before {
+    transform: scale(1, 1);
+    transition: transform 0.1s;
   }
 }
 
@@ -1344,7 +1406,7 @@ header {
 
     @include sp {
       bottom: -90px;
-      right: 5%;
+      right: 24%;
       font-size: 3rem;
     }
   }
@@ -1404,7 +1466,7 @@ header {
     }
 
     @include sp {
-      width: 80vw;
+      width: 68vw;
       height: 90%;
       top: 0;
       left: 20%;
@@ -1425,7 +1487,7 @@ header {
     }
 
     @include sp {
-      width: 80vw;
+      width: 68vw;
       height: 90%;
       top: 0;
       left: 20%;
@@ -1446,7 +1508,7 @@ header {
     }
 
     @include sp {
-      width: 80vw;
+      width: 68vw;
       height: 90%;
       top: 0;
       left: 20%;
@@ -1458,13 +1520,37 @@ header {
     text-decoration: none;
     color: #000;
 
+    @include pc {
+      position: relative;
+    }
+
     @include sp {
       position: absolute;
       bottom: -70%;
-      right: -8%;
+      right: 3%;
       font-size: 3.2vw;
       line-height: 2.5;
     }
+  }
+
+  &__more a::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/wave.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    transform: scale(0, 1);
+    transition: transform 0.1s;
+  }
+
+  &__more a:hover::before {
+    transform: scale(1, 1);
+    transition: transform 0.1s;
   }
 }
 
@@ -1567,7 +1653,7 @@ header {
     }
 
     @include sp {
-      width: 80vw;
+      width: 68vw;
       height: 90%;
       top: 0;
       left: 20%;
@@ -1588,7 +1674,7 @@ header {
     }
 
     @include sp {
-      width: 80vw;
+      width: 68vw;
       height: 90%;
       top: 0;
       left: 20%;
@@ -1600,13 +1686,37 @@ header {
     text-decoration: none;
     color: #000;
 
+    @include pc {
+      position: relative;
+    }
+
     @include sp {
       position: absolute;
       bottom: -80%;
-      right: -8%;
+      right: 3%;
       font-size: 3.2vw;
       line-height: 2.5;
     }
+  }
+
+  &__more a::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/wave.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    transform: scale(0, 1);
+    transition: transform 0.1s;
+  }
+
+  &__more a:hover::before {
+    transform: scale(1, 1);
+    transition: transform 0.1s;
   }
 }
 
@@ -1994,7 +2104,7 @@ header {
   &__top {
 
     @include pc {
-      padding: 100px 0 0 250px;
+      padding: 100px 0 0 20%;
     }
 
     @include sp {
@@ -2021,7 +2131,7 @@ header {
 
     @include pc {
       display: flex;
-      gap: 10vw;
+      gap: 3vw;
       line-height: 1.4;
       font-weight: 550;
     }
@@ -2030,6 +2140,7 @@ header {
   &__infoArea {
     @include pc {
       display: flex;
+      width: 40%;
       gap: 2vw;
       align-items: end;
       margin-bottom: 50px;
@@ -2080,6 +2191,7 @@ header {
 
     @include pc {
       display: flex;
+      width: 40%;
       gap: 2vw;
       align-items: center;
     }
@@ -2123,7 +2235,7 @@ header {
   &__others {
     background-color: black;
     padding: 100px;
-    margin: 16px 0 0 250px;
+    margin: 16px 0 0 20%;
 
     @include sp {
       margin: 16px 0 0 10%;
@@ -2172,7 +2284,7 @@ header {
   & small {
 
     @include pc {
-      margin-left: 250px;
+      margin-left: 20%;
     }
 
     @include sp {
