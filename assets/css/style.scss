@@ -327,8 +327,9 @@ header {
   width: 16vw;
   position: fixed;
   bottom: 36px;
-  right: 123px;
+  right: 50px;
   z-index: 9;
+  transition: 0.3s;
 
   @include sp {
     width: 40vw;
@@ -358,6 +359,11 @@ header {
       font-size: 3vw;
     }
   }
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
 }
 
 .l-topArea {

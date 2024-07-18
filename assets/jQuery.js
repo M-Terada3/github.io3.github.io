@@ -14,7 +14,7 @@ $(function() {
 });
 
 
-//hamburger
+//hamburger//
 $(function () {
   $(".hamBtn").on("click", function () {
     $(".hamBtn").toggleClass("close");
@@ -29,7 +29,7 @@ $(function () {
   });
 });
 
-//slider
+//slider//
 $(function () {
   $(".slider").slick({
     arrows: false,
@@ -41,3 +41,19 @@ $(function () {
   });
 });
 
+//reservation hidden//
+$(function() {
+
+  var footer = $('.l-footer__others').innerHeight();
+  window.onscroll = function () {
+    var point = window.pageYOffset;
+    var docHeight = $(document).height();
+    var dispHeight = $(window).height();
+
+    if(point > docHeight-dispHeight-footer){
+      $('.p-reservation').addClass('is-hidden');
+    }else{
+      $('.p-reservation').removeClass('is-hidden');
+    }
+  };
+  });
